@@ -1,0 +1,75 @@
+2026-05-04 03:53:16,578  INFO      =======================================================
+2026-05-04 03:53:16,578  INFO      Vision-Based Desktop Automation — macOS
+2026-05-04 03:53:16,578  INFO      =======================================================
+2026-05-04 03:53:16,759  ERROR     API request failed: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))
+2026-05-04 03:53:16,759  ERROR     Failed to fetch posts — check your network connection
+2026-05-04 03:53:43,001  INFO      =======================================================
+2026-05-04 03:53:43,001  INFO      Vision-Based Desktop Automation — macOS
+2026-05-04 03:53:43,002  INFO      =======================================================
+2026-05-04 03:53:43,083  ERROR     API request failed: HTTPSConnectionPool(host='jsonplaceholder.typicode.com', port=443): Max retries exceeded with url: /posts (Caused by NameResolutionError("HTTPSConnection(host='jsonplaceholder.typicode.com', port=443): Failed to resolve 'jsonplaceholder.typicode.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-05-04 03:53:43,083  ERROR     Failed to fetch posts — check your network connection
+2026-05-04 04:24:49,861  INFO      =======================================================
+2026-05-04 04:24:49,861  INFO      Vision-Based Desktop Automation — macOS
+2026-05-04 04:24:49,861  INFO      =======================================================
+2026-05-04 04:24:49,948  WARNING   API unavailable (HTTPSConnectionPool(host='jsonplaceholder.typicode.com', port=443): Max retries exceeded with url: /posts (Caused by NameResolutionError("HTTPSConnection(host='jsonplaceholder.typicode.com', port=443): Failed to resolve 'jsonplaceholder.typicode.com' ([Errno 8] nodename nor servname provided, or not known)"))) — using offline fallback data
+2026-05-04 04:24:49,948  INFO      Fetched 10 posts
+2026-05-04 04:24:49,948  INFO      === DRY-RUN MODE: API fetch only ===
+2026-05-04 04:25:29,524  INFO      =======================================================
+2026-05-04 04:25:29,524  INFO      Vision-Based Desktop Automation — macOS
+2026-05-04 04:25:29,524  INFO      =======================================================
+2026-05-04 04:25:29,527  WARNING   API unavailable (HTTPSConnectionPool(host='jsonplaceholder.typicode.com', port=443): Max retries exceeded with url: /posts (Caused by NameResolutionError("HTTPSConnection(host='jsonplaceholder.typicode.com', port=443): Failed to resolve 'jsonplaceholder.typicode.com' ([Errno 8] nodename nor servname provided, or not known)"))) — using offline fallback data
+2026-05-04 04:25:29,527  INFO      Fetched 10 posts
+2026-05-04 04:25:29,527  INFO      === DRY-RUN MODE: API fetch only ===
+2026-05-04 04:26:13,002  INFO      =======================================================
+2026-05-04 04:26:13,003  INFO      Vision-Based Desktop Automation — macOS
+2026-05-04 04:26:13,003  INFO      =======================================================
+2026-05-04 04:26:23,517  WARNING   API unavailable (HTTPSConnectionPool(host='jsonplaceholder.typicode.com', port=443): Max retries exceeded with url: /posts (Caused by NameResolutionError("HTTPSConnection(host='jsonplaceholder.typicode.com', port=443): Failed to resolve 'jsonplaceholder.typicode.com' ([Errno 8] nodename nor servname provided, or not known)"))) — using offline fallback data
+2026-05-04 04:26:23,517  INFO      Fetched 10 posts
+2026-05-04 04:26:23,528  INFO      Template loaded: notes_icon.png  shape=(196, 172)
+2026-05-04 04:26:23,528  INFO      === DEMO MODE: icon detection only ===
+2026-05-04 04:26:50,811  INFO      =======================================================
+2026-05-04 04:26:50,811  INFO      Vision-Based Desktop Automation — macOS
+2026-05-04 04:26:50,812  INFO      =======================================================
+2026-05-04 04:26:50,815  WARNING   API unavailable (HTTPSConnectionPool(host='jsonplaceholder.typicode.com', port=443): Max retries exceeded with url: /posts (Caused by NameResolutionError("HTTPSConnection(host='jsonplaceholder.typicode.com', port=443): Failed to resolve 'jsonplaceholder.typicode.com' ([Errno 8] nodename nor servname provided, or not known)"))) — using offline fallback data
+2026-05-04 04:26:50,815  INFO      Fetched 10 posts
+2026-05-04 04:26:50,821  INFO      Template loaded: notes_icon.png  shape=(196, 172)
+2026-05-04 04:26:50,821  INFO      === DEMO MODE: icon detection only ===
+2026-05-04 04:26:53,649  INFO      Detection attempt 1/3
+2026-05-04 04:26:54,881  INFO      [template] found at (950, 278)  conf=0.855
+2026-05-04 04:26:55,013  INFO      Annotated screenshot saved: demo_detection.png
+2026-05-04 04:28:26,052  INFO      =======================================================
+2026-05-04 04:28:26,052  INFO      Vision-Based Desktop Automation — macOS
+2026-05-04 04:28:26,052  INFO      =======================================================
+2026-05-04 04:28:39,769  WARNING   API unavailable (HTTPSConnectionPool(host='jsonplaceholder.typicode.com', port=443): Max retries exceeded with url: /posts (Caused by NameResolutionError("HTTPSConnection(host='jsonplaceholder.typicode.com', port=443): Failed to resolve 'jsonplaceholder.typicode.com' ([Errno 8] nodename nor servname provided, or not known)"))) — using offline fallback data
+2026-05-04 04:28:39,770  INFO      Fetched 10 posts
+2026-05-04 04:28:39,779  INFO      Template loaded: notes_icon.png  shape=(196, 172)
+2026-05-04 04:28:39,779  INFO      === DEMO MODE: icon detection only ===
+2026-05-04 04:28:42,591  INFO      Detection attempt 1/3
+2026-05-04 04:28:48,846  INFO      [OCR] found at (1241, 874)  conf=0.774
+2026-05-04 04:28:48,968  INFO      Annotated screenshot saved: demo_detection.png
+2026-05-04 04:29:42,375  INFO      =======================================================
+2026-05-04 04:29:42,375  INFO      Vision-Based Desktop Automation — macOS
+2026-05-04 04:29:42,375  INFO      =======================================================
+2026-05-04 04:29:42,379  WARNING   API unavailable (HTTPSConnectionPool(host='jsonplaceholder.typicode.com', port=443): Max retries exceeded with url: /posts (Caused by NameResolutionError("HTTPSConnection(host='jsonplaceholder.typicode.com', port=443): Failed to resolve 'jsonplaceholder.typicode.com' ([Errno 8] nodename nor servname provided, or not known)"))) — using offline fallback data
+2026-05-04 04:29:42,379  INFO      Fetched 10 posts
+2026-05-04 04:29:42,385  INFO      Template loaded: notes_icon.png  shape=(196, 172)
+2026-05-04 04:29:42,385  INFO      === DEMO MODE: icon detection only ===
+2026-05-04 04:29:45,311  INFO      Detection attempt 1/3
+2026-05-04 04:29:46,631  INFO      [template] found at (2900, 1954)  conf=0.853
+2026-05-04 04:29:46,813  INFO      Annotated screenshot saved: demo_detection.png
+2026-05-04 04:30:24,222  INFO      =======================================================
+2026-05-04 04:30:24,222  INFO      Vision-Based Desktop Automation — macOS
+2026-05-04 04:30:24,222  INFO      =======================================================
+2026-05-04 04:30:38,032  WARNING   API unavailable (HTTPSConnectionPool(host='jsonplaceholder.typicode.com', port=443): Max retries exceeded with url: /posts (Caused by NameResolutionError("HTTPSConnection(host='jsonplaceholder.typicode.com', port=443): Failed to resolve 'jsonplaceholder.typicode.com' ([Errno 8] nodename nor servname provided, or not known)"))) — using offline fallback data
+2026-05-04 04:30:38,033  INFO      Fetched 10 posts
+2026-05-04 04:30:38,041  INFO      Template loaded: notes_icon.png  shape=(196, 172)
+2026-05-04 04:30:38,041  INFO      === DEMO MODE: icon detection only ===
+2026-05-04 04:30:41,010  INFO      Detection attempt 1/3
+2026-05-04 04:30:42,331  INFO      [template] found at (158, 1028)  conf=0.863
+2026-05-04 04:30:42,505  INFO      Annotated screenshot saved: demo_detection.png
+2026-05-04 17:24:05,605  INFO      =======================================================
+2026-05-04 17:24:05,606  INFO      Vision-Based Desktop Automation — macOS
+2026-05-04 17:24:05,606  INFO      =======================================================
+2026-05-04 17:24:26,681  WARNING   API unavailable (HTTPSConnectionPool(host='jsonplaceholder.typicode.com', port=443): Max retries exceeded with url: /posts (Caused by NameResolutionError("HTTPSConnection(host='jsonplaceholder.typicode.com', port=443): Failed to resolve 'jsonplaceholder.typicode.com' ([Errno 8] nodename nor servname provided, or not known)"))) — using offline fallback data
+2026-05-04 17:24:26,681  INFO      Loaded 10 posts
+2026-05-04 17:24:26,689  INFO      DRY-RUN — showing fetched posts, no automation will run
