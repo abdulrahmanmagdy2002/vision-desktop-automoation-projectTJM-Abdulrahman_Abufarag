@@ -22,14 +22,11 @@ import cv2
 
 from src.api_client import fetch_posts, format_post, validate_post
 from src.automation import (
-    close_note,
-    create_new_note,
     force_quit,
     launch_notes,
-    paste_content,
     quit_notes,
-    save_txt_file,
     show_desktop,
+    write_note_and_save_file,
 )
 from src.grounding import IconGrounder
 from src.utils import annotate_screenshot, capture_screenshot, ensure_directory, get_desktop_path
@@ -142,26 +139,16 @@ def run_automation(
                 quit_notes()
                 continue
 
-            create_new_note()
-
-            # ── Step 5: paste the post content into the note ───────────
-            content = format_post(post)
-            if not paste_content(content):
-                logger.error("Could not paste content — skipping this post")
-                failed += 1
-                quit_notes()
-                continue
-
-            # ── Step 6: write the .txt file to Desktop/tjm-project ─────
+            # ── Step 5 & 6: write note + save .txt file via AppleScript
+            content  = format_post(post)
             txt_path = output_dir / f"post_{post['id']}.txt"
-            if not save_txt_file(content, txt_path):
-                logger.error(f"Could not write {txt_path.name} — skipping this post")
+            if not write_note_and_save_file(content, txt_path):
+                logger.error(f"Could not save post {post['id']} — skipping")
                 failed += 1
                 quit_notes()
                 continue
 
-            # ── Step 7: close the note and quit Notes ──────────────────
-            close_note()
+            # ── Step 7: quit Notes ─────────────────────────────────────
             quit_notes()
             saved += 1
             logger.info(f"Done — post_{post['id']}.txt saved successfully")

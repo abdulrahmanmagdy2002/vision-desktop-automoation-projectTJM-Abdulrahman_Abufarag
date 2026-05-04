@@ -1,15 +1,21 @@
 """
-Mac-specific desktop automation using pyautogui, pyperclip, and AppleScript.
+Mac-specific desktop automation using pyautogui and AppleScript.
 
 Target application: Notes (macOS)
 
-How the three tools are used together:
-  - pyautogui  moves the mouse and clicks (launches Notes, creates new note)
-  - pyperclip  puts the post text on the clipboard so we can paste it in one
-               shot — faster and Unicode-safe compared to typing char by char
-  - osascript  (AppleScript via subprocess) handles app lifecycle (quit,
-               activate, check if running) because macOS doesn't expose a
-               simple Python API for window management
+How the tools are used:
+  - pyautogui  moves the mouse and double-clicks to launch Notes from its icon
+  - osascript  (AppleScript via subprocess) handles everything else:
+               creating the note, writing its content, quitting the app.
+               AppleScript talks directly to Notes without needing window
+               focus, which eliminates the keyboard-typing reliability issues.
+
+Why AppleScript for content instead of clipboard paste:
+  pyautogui hotkeys like Cmd+V require the target window to have keyboard
+  focus.  macOS focus is not guaranteed after programmatic app launch, so
+  the keys were landing outside Notes and typing literal 'v' / 'w' characters.
+  AppleScript bypasses the UI layer entirely — it tells Notes what to do
+  through its scripting interface regardless of which window is in front.
 """
 
 import logging
@@ -19,12 +25,11 @@ from pathlib import Path
 from typing import Optional
 
 import pyautogui
-import pyperclip
 
 logger = logging.getLogger(__name__)
 
 pyautogui.FAILSAFE = True   # safety valve: move mouse to top-left to abort
-pyautogui.PAUSE    = 0.05   # small gap between every pyautogui call
+pyautogui.PAUSE    = 0.05
 
 APP_NAME = "Notes"
 
@@ -48,7 +53,7 @@ def show_desktop() -> None:
     end tell
     """
     _run_applescript(script)
-    time.sleep(0.6)     # give macOS a moment to finish hiding the windows
+    time.sleep(0.6)
 
 
 # ------------------------------------------------------------------ #
@@ -59,8 +64,8 @@ def launch_notes(x: int, y: int) -> bool:
     """
     Move the mouse to (x, y) and double-click to open Notes from its desktop alias.
 
-    If Notes doesn't appear within 8 seconds we fall back to `open -a Notes`
-    so the script keeps running even if the double-click was slightly off.
+    Falls back to `open -a Notes` if Notes doesn't appear within 8 seconds,
+    so the script keeps running even if the double-click landed slightly off.
     """
     logger.info(f"Moving to Notes icon at ({x}, {y}) and double-clicking")
     try:
@@ -85,78 +90,41 @@ def launch_notes(x: int, y: int) -> bool:
         return False
 
 
-def create_new_note() -> bool:
-    """Press Cmd+N inside Notes to open a fresh, empty note."""
-    _bring_to_front()
-    time.sleep(0.3)
-    pyautogui.hotkey("command", "n")
-    time.sleep(0.5)
-    logger.info("New note ready")
-    return True
-
-
-def paste_content(text: str) -> bool:
+def write_note_and_save_file(content: str, filepath: Path) -> bool:
     """
-    Copy `text` to the clipboard and paste it into the active Notes window.
+    Save the post in two places:
 
-    We use the clipboard (copy → Cmd+V) instead of typing character by character
-    because it handles all Unicode correctly and is much faster.
+    1. As a plain-text .txt file on the Desktop (written directly by Python).
+    2. As a new note in the Notes app (created via AppleScript).
+
+    Writing the file first means the AppleScript can read it back — this avoids
+    all string-escaping problems with newlines and special characters in the
+    note body.  Even if the Notes step fails, the .txt file is always saved.
     """
-    try:
-        _bring_to_front()
-        time.sleep(0.2)
-
-        # Select everything and clear it before pasting
-        pyautogui.hotkey("command", "a")
-        time.sleep(0.1)
-        pyautogui.press("delete")
-        time.sleep(0.1)
-
-        pyperclip.copy(text)
-        pyautogui.hotkey("command", "v")
-        time.sleep(0.3)
-
-        logger.info(f"Pasted {len(text)} characters into the note")
-        return True
-
-    except pyautogui.FailSafeException:
-        logger.warning("Failsafe triggered during paste — aborting")
-        return False
-    except Exception as e:
-        logger.error(f"Error while pasting content: {e}")
-        return False
-
-
-def save_txt_file(content: str, filepath: Path) -> bool:
-    """
-    Write the post content to a plain-text .txt file on disk.
-
-    Notes saves its notes in its own iCloud/local database and doesn't offer
-    a 'Save As .txt' option, so we write the file ourselves.
-    """
+    # ── Step A: write the .txt file ───────────────────────────────────
     try:
         filepath.parent.mkdir(parents=True, exist_ok=True)
         filepath.write_text(content, encoding="utf-8")
-        if filepath.exists():
-            logger.info(f"File written: {filepath.name}")
-            return True
-        logger.error(f"File missing after write: {filepath}")
-        return False
+        logger.info(f"File written: {filepath.name}")
     except Exception as e:
-        logger.error(f"Error writing file {filepath.name}: {e}")
+        logger.error(f"Could not write {filepath.name}: {e}")
         return False
 
+    # ── Step B: create the Notes note by reading back that file ───────
+    posix_path = str(filepath.absolute())
+    note_script = f"""
+    set noteBody to (read POSIX file "{posix_path}" as «class utf8»)
+    tell application "Notes"
+        make new note with properties {{body: noteBody}}
+    end tell
+    """
+    result = _run_applescript(note_script)
+    if result is None:
+        logger.warning("AppleScript note creation failed — but the .txt file was saved")
+    else:
+        logger.info("Note created in Notes app")
 
-def close_note() -> None:
-    """
-    Close the current note with Cmd+W.
-    Notes auto-saves so there's no save dialog to handle.
-    """
-    _bring_to_front()
-    time.sleep(0.1)
-    pyautogui.hotkey("command", "w")
-    time.sleep(0.3)
-    logger.info("Note closed")
+    return True     # .txt file is the primary deliverable
 
 
 def quit_notes() -> bool:
@@ -215,8 +183,3 @@ def _wait_for_notes(timeout: float = 8.0) -> bool:
         time.sleep(0.3)
     logger.warning(f"Notes did not start within {timeout:.0f} seconds")
     return False
-
-
-def _bring_to_front() -> None:
-    """Bring the Notes window to the front so keyboard events go to it."""
-    _run_applescript(f'tell application "{APP_NAME}" to activate')
