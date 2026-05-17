@@ -60,6 +60,11 @@ def show_desktop() -> None:
 #  App lifecycle                                                       #
 # ------------------------------------------------------------------ #
 
+pyautogui.click(700, 600)   # click empty desktop area to deselect
+time.sleep(0.3)
+pyautogui.moveTo(x, y, duration=0.4)
+pyautogui.doubleClick(interval=0.15)
+
 def launch_notes(x: int, y: int) -> bool:
     """
     Move the mouse to (x, y) and double-click to open Notes from its desktop alias.
