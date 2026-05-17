@@ -53,7 +53,7 @@ def show_desktop() -> None:
     end tell
     """
     _run_applescript(script)
-    time.sleep(0.6)
+    time.sleep(1.5)
 
 
 # ------------------------------------------------------------------ #

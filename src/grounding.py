@@ -5,7 +5,7 @@ Two-stage cascaded approach:
 
 Stage 1 — Multi-scale template matching (OpenCV)
   We slide a reference crop of the icon across the screenshot at six different
-  zoom levels (0.5× to 2.0×).  This handles macOS's Small/Medium/Large icon
+  zoom levels (0.5x to 2.0x).  This handles macOS's Small/Medium/Large icon
   size setting and Retina vs non-Retina displays.  Fast (~50 ms) and precise
   when the reference image is available.
 
@@ -18,6 +18,14 @@ Stage 2 — OCR text-label detection (Tesseract, fallback)
   so it generalises to any icon or button described in plain English.
 
 Both stages include configurable retry logic with delays between attempts.
+
+Retina / HiDPI note
+-------------------
+pyautogui.screenshot() captures at physical pixel resolution (2x on Retina
+Macs), but pyautogui.moveTo() / doubleClick() work in logical coordinates
+(half that resolution).  All coordinates returned by detect() are already
+converted to logical space via get_screen_scale(), so callers can pass them
+directly to pyautogui without any further adjustment.
 """
 
 import logging
@@ -30,7 +38,7 @@ import numpy as np
 import pytesseract
 from PIL import Image
 
-from .utils import capture_screenshot
+from .utils import capture_screenshot, get_screen_scale
 
 logger = logging.getLogger(__name__)
 
@@ -41,6 +49,9 @@ class IconGrounder:
     """
     Locate a desktop icon and return its center coordinates (x, y).
 
+    Returned coordinates are always in logical screen space so they can be
+    passed directly to pyautogui without any Retina/HiDPI adjustment.
+
     Usage:
         grounder = IconGrounder(target_name="Notes")
         x, y, confidence = grounder.detect_with_retry()
@@ -50,11 +61,11 @@ class IconGrounder:
         self,
         target_name: str = "Notes",
         template_path: Optional[Path] = None,
-        template_threshold: float = 0.75,   # min confidence to accept a template match
-        ocr_threshold: float = 0.55,        # min score to accept an OCR match
+        template_threshold: float = 0.75,
+        ocr_threshold: float = 0.55,
     ):
-        self.target_name       = target_name
-        self.target_lower      = target_name.lower()
+        self.target_name        = target_name
+        self.target_lower       = target_name.lower()
         self.template_threshold = template_threshold
         self.ocr_threshold      = ocr_threshold
         self.template_gray: Optional[np.ndarray] = None
@@ -79,23 +90,32 @@ class IconGrounder:
         """
         Try to find the icon in a single screenshot.
 
-        Returns (x, y, confidence) on success, or (None, None, 0.0) if the
-        icon could not be located.
+        Returns (x, y, confidence) on success where (x, y) are logical screen
+        coordinates ready to pass to pyautogui.  Returns (None, None, 0.0) if
+        the icon could not be located.
         """
         if screenshot is None:
             screenshot = capture_screenshot()
 
+        # Convert pixel coords → logical coords for Retina/HiDPI displays.
+        # On a standard 1:1 display scale == 1.0 and this is a no-op.
+        scale = get_screen_scale(screenshot)
+
         # Stage 1: template matching — fast, uses the reference image
         if self.template_gray is not None:
-            x, y, confidence = self._run_template_match(screenshot)
+            px, py, confidence = self._run_template_match(screenshot)
             if confidence >= self.template_threshold:
+                x, y = int(px / scale), int(py / scale)
                 logger.info(f"[template match]  found at ({x}, {y})  conf={confidence:.3f}")
                 return x, y, confidence
-            logger.debug(f"[template match]  conf={confidence:.3f} too low (need {self.template_threshold})")
+            logger.debug(
+                f"[template match]  conf={confidence:.3f} too low (need {self.template_threshold})"
+            )
 
         # Stage 2: OCR — slower, but works without a reference image
-        x, y, confidence = self._run_ocr_detection(screenshot)
-        if confidence >= self.ocr_threshold:
+        px, py, confidence = self._run_ocr_detection(screenshot)
+        if px is not None and confidence >= self.ocr_threshold:
+            x, y = int(px / scale), int(py / scale)
             logger.info(f"[OCR detection]  found at ({x}, {y})  conf={confidence:.3f}")
             return x, y, confidence
 
@@ -132,6 +152,8 @@ class IconGrounder:
         """
         Slide the template across the screenshot at multiple zoom levels and
         return the location with the highest normalised cross-correlation score.
+
+        Coordinates returned are in screenshot pixel space (not yet scaled).
         """
         gray_screen = cv2.cvtColor(screenshot, cv2.COLOR_BGR2GRAY)
         tpl_h, tpl_w = self.template_gray.shape
@@ -143,7 +165,6 @@ class IconGrounder:
             scaled_w = int(tpl_w * scale)
             scaled_h = int(tpl_h * scale)
 
-            # Skip if the scaled template is larger than the screen
             if scaled_w > gray_screen.shape[1] or scaled_h > gray_screen.shape[0]:
                 continue
 
@@ -155,7 +176,6 @@ class IconGrounder:
 
             if max_score > best_confidence:
                 best_confidence = max_score
-                # Convert top-left corner to center coordinates
                 best_x = top_left[0] + scaled_w // 2
                 best_y = top_left[1] + scaled_h // 2
 
@@ -172,8 +192,7 @@ class IconGrounder:
         Read the text labels on the desktop with Tesseract and find the one
         that most closely matches the target icon name.
 
-        The icon graphic lives ABOVE its text label, so once we know the
-        label's bounding box we can estimate where the icon center is.
+        Coordinates returned are in screenshot pixel space (not yet scaled).
         """
         preprocessed = self._preprocess_for_ocr(screenshot)
 
@@ -181,7 +200,7 @@ class IconGrounder:
             ocr_data = pytesseract.image_to_data(
                 Image.fromarray(preprocessed),
                 output_type=pytesseract.Output.DICT,
-                config="--psm 11",  # PSM 11 = sparse text, best for desktop icons
+                config="--psm 11",
             )
         except Exception as e:
             logger.error(f"Tesseract failed: {e}")
@@ -200,7 +219,6 @@ class IconGrounder:
                 continue
 
             ocr_confidence = max(0.0, float(ocr_data["conf"][i])) / 100.0
-            # Text similarity matters much more than Tesseract's own confidence
             score = similarity * 0.9 + ocr_confidence * 0.1
 
             if score > best_score:
@@ -209,7 +227,6 @@ class IconGrounder:
                 label_y = ocr_data["top"][i]
                 label_w = ocr_data["width"][i]
                 label_h = ocr_data["height"][i]
-                # The icon sits directly above its label
                 best_x = label_x + label_w // 2
                 best_y = max(0, label_y - max(label_h * 2, 48))
 
@@ -262,7 +279,6 @@ class IconGrounder:
             return 0.85
         if target in candidate or candidate in target:
             return 0.65
-        # Loose overlap check for OCR typos
         overlap_ratio = sum(c in target for c in candidate) / max(len(target), 1)
         if len(candidate) > 0 and overlap_ratio >= 0.7:
             return 0.4

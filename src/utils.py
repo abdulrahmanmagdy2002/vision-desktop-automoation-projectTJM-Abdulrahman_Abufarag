@@ -15,6 +15,26 @@ def capture_screenshot() -> np.ndarray:
     return cv2.cvtColor(rgb_array, cv2.COLOR_RGB2BGR)
 
 
+def get_screen_scale(screenshot: np.ndarray) -> float:
+    """
+    Return the pixel-to-logical-coordinate scale factor.
+
+    On Retina/HiDPI Macs pyautogui.screenshot() captures at 2x physical
+    resolution (e.g. 3456 px wide) while pyautogui.moveTo() expects logical
+    coordinates (e.g. 1728 px wide).  Dividing detected pixel coordinates by
+    this factor converts them to the logical space pyautogui actually clicks in.
+
+    Works by comparing the captured screenshot width (physical pixels) against
+    pyautogui.size() which always returns logical screen dimensions.
+    On a standard 1:1 display this always returns 1.0 so it is always safe to use.
+    """
+    logical_w, _ = pyautogui.size()
+    screenshot_w = screenshot.shape[1]
+    if logical_w <= 0:
+        return 1.0
+    return screenshot_w / logical_w
+
+
 def get_desktop_path() -> Path:
     return Path.home() / "Desktop"
 
