@@ -29,7 +29,13 @@ from src.automation import (
     write_note_and_save_file,
 )
 from src.grounding import IconGrounder
-from src.utils import annotate_screenshot, capture_screenshot, ensure_directory, get_desktop_path
+from src.utils import (
+    annotate_screenshot,
+    capture_screenshot,
+    ensure_directory,
+    get_desktop_path,
+    get_screen_scale,
+)
 
 # ---------------------------------------------------------------------------
 # Logging — goes to both the terminal and automation.log
@@ -59,7 +65,11 @@ POST_LIMIT    = 10
 
 def save_detection_image(screenshot, x: int, y: int, confidence: float, path: Path) -> None:
     """Overlay a bounding box + label on the screenshot and write it to disk."""
-    annotated = annotate_screenshot(screenshot, x, y, label="Notes", confidence=confidence)
+    # (x, y) are in logical coords but the screenshot is in physical pixels.
+    # On Retina that's a 2x difference — scale up so the box lands on the icon.
+    scale = get_screen_scale(screenshot)
+    px, py = int(x * scale), int(y * scale)
+    annotated = annotate_screenshot(screenshot, px, py, label="Notes", confidence=confidence)
     cv2.imwrite(str(path), annotated)
     logger.info(f"Detection screenshot saved → {path.name}")
 

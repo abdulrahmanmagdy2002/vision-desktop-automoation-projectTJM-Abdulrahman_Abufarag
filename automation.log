@@ -986,3 +986,830 @@
 2026-05-17 15:41:03,426  INFO      Files   → /Users/abdulrahmanmagdy/Desktop/tjm-project
 2026-05-17 15:41:03,426  INFO      Screenshots → /Users/abdulrahmanmagdy/Desktop/tjm-project/detection_screenshots
 2026-05-17 15:41:03,426  INFO      =======================================================
+2026-05-18 14:07:35,713  INFO      =======================================================
+2026-05-18 14:07:35,715  INFO      Vision-Based Desktop Automation — macOS
+2026-05-18 14:07:35,715  INFO      =======================================================
+2026-05-18 14:07:35,791  WARNING   API unavailable (HTTPSConnectionPool(host='jsonplaceholder.typicode.com', port=443): Max retries exceeded with url: /posts (Caused by NameResolutionError("HTTPSConnection(host='jsonplaceholder.typicode.com', port=443): Failed to resolve 'jsonplaceholder.typicode.com' ([Errno 8] nodename nor servname provided, or not known)"))) — using offline fallback data
+2026-05-18 14:07:35,791  INFO      Loaded 10 posts
+2026-05-18 14:07:35,798  INFO      Template image loaded: notes_icon.png  (196, 172)
+2026-05-18 14:07:35,798  INFO      
+2026-05-18 14:07:35,798  INFO      =======================================================
+2026-05-18 14:07:35,798  INFO      Processing post 1 of 10  (id=1)
+2026-05-18 14:07:35,798  INFO      =======================================================
+2026-05-18 14:07:38,621  INFO      Detection attempt 1 of 3
+2026-05-18 14:07:42,821  INFO      [OCR detection]  found at (786, 430)  conf=0.996
+2026-05-18 14:07:43,027  INFO      Detection screenshot saved → detection_post_1.png
+2026-05-18 14:07:44,137  INFO      Moving to Notes icon at (786, 430) and double-clicking
+2026-05-18 14:07:53,736  WARNING   Notes did not start within 8 seconds
+2026-05-18 14:07:53,736  WARNING   Double-click timed out — trying 'open -a Notes' as fallback
+2026-05-18 14:07:53,942  INFO      File written: post_1.txt
+2026-05-18 14:07:55,076  INFO      Note created in Notes app
+2026-05-18 14:07:56,070  INFO      Notes closed
+2026-05-18 14:07:56,075  INFO      Done — post_1.txt saved successfully
+2026-05-18 14:07:56,482  INFO      
+2026-05-18 14:07:56,482  INFO      =======================================================
+2026-05-18 14:07:56,482  INFO      Processing post 2 of 10  (id=2)
+2026-05-18 14:07:56,482  INFO      =======================================================
+2026-05-18 14:07:59,103  INFO      Detection attempt 1 of 3
+2026-05-18 14:08:03,066  INFO      [OCR detection]  found at (786, 430)  conf=0.996
+2026-05-18 14:08:03,272  INFO      Detection screenshot saved → detection_post_2.png
+2026-05-18 14:08:04,365  INFO      Moving to Notes icon at (786, 430) and double-clicking
+2026-05-18 14:08:13,963  WARNING   Notes did not start within 8 seconds
+2026-05-18 14:08:13,965  WARNING   Double-click timed out — trying 'open -a Notes' as fallback
+2026-05-18 14:08:14,210  INFO      File written: post_2.txt
+2026-05-18 14:08:14,705  INFO      Note created in Notes app
+2026-05-18 14:08:15,591  INFO      Notes closed
+2026-05-18 14:08:15,592  INFO      Done — post_2.txt saved successfully
+2026-05-18 14:08:15,997  INFO      
+2026-05-18 14:08:15,997  INFO      =======================================================
+2026-05-18 14:08:15,997  INFO      Processing post 3 of 10  (id=3)
+2026-05-18 14:08:15,997  INFO      =======================================================
+2026-05-18 14:08:18,552  INFO      Detection attempt 1 of 3
+2026-05-18 14:08:19,972  INFO      [template match]  found at (1732, 92)  conf=0.792
+2026-05-18 14:08:20,572  INFO      Detection screenshot saved → detection_post_3.png
+2026-05-18 14:08:21,682  INFO      Moving to Notes icon at (1732, 92) and double-clicking
+2026-05-18 14:08:31,309  WARNING   Notes did not start within 8 seconds
+2026-05-18 14:08:31,309  WARNING   Double-click timed out — trying 'open -a Notes' as fallback
+2026-05-18 14:08:31,531  INFO      File written: post_3.txt
+2026-05-18 14:08:32,056  INFO      Note created in Notes app
+2026-05-18 14:08:32,933  INFO      Notes closed
+2026-05-18 14:08:32,933  INFO      Done — post_3.txt saved successfully
+2026-05-18 14:08:33,339  INFO      
+2026-05-18 14:08:33,339  INFO      =======================================================
+2026-05-18 14:08:33,339  INFO      Processing post 4 of 10  (id=4)
+2026-05-18 14:08:33,339  INFO      =======================================================
+2026-05-18 14:08:35,899  INFO      Detection attempt 1 of 3
+2026-05-18 14:08:37,355  INFO      [template match]  found at (1732, 92)  conf=0.785
+2026-05-18 14:08:37,959  INFO      Detection screenshot saved → detection_post_4.png
+2026-05-18 14:08:39,064  INFO      Moving to Notes icon at (1732, 92) and double-clicking
+2026-05-18 14:08:48,694  WARNING   Notes did not start within 8 seconds
+2026-05-18 14:08:48,695  WARNING   Double-click timed out — trying 'open -a Notes' as fallback
+2026-05-18 14:08:48,948  INFO      File written: post_4.txt
+2026-05-18 14:08:49,433  INFO      Note created in Notes app
+2026-05-18 14:08:50,305  INFO      Notes closed
+2026-05-18 14:08:50,305  INFO      Done — post_4.txt saved successfully
+2026-05-18 14:08:50,711  INFO      
+2026-05-18 14:08:50,711  INFO      =======================================================
+2026-05-18 14:08:50,711  INFO      Processing post 5 of 10  (id=5)
+2026-05-18 14:08:50,711  INFO      =======================================================
+2026-05-18 14:08:53,305  INFO      Detection attempt 1 of 3
+2026-05-18 14:08:54,739  INFO      [template match]  found at (1732, 92)  conf=0.785
+2026-05-18 14:08:55,333  INFO      Detection screenshot saved → detection_post_5.png
+2026-05-18 14:08:56,428  INFO      Moving to Notes icon at (1732, 92) and double-clicking
+2026-05-18 14:09:06,007  WARNING   Notes did not start within 8 seconds
+2026-05-18 14:09:06,009  WARNING   Double-click timed out — trying 'open -a Notes' as fallback
+2026-05-18 14:09:06,261  INFO      File written: post_5.txt
+2026-05-18 14:09:06,798  INFO      Note created in Notes app
+2026-05-18 14:09:07,674  INFO      Notes closed
+2026-05-18 14:09:07,674  INFO      Done — post_5.txt saved successfully
+2026-05-18 14:09:08,079  INFO      
+2026-05-18 14:09:08,079  INFO      =======================================================
+2026-05-18 14:09:08,079  INFO      Processing post 6 of 10  (id=6)
+2026-05-18 14:09:08,079  INFO      =======================================================
+2026-05-18 14:09:10,670  INFO      Detection attempt 1 of 3
+2026-05-18 14:09:12,112  INFO      [template match]  found at (1732, 92)  conf=0.785
+2026-05-18 14:09:12,713  INFO      Detection screenshot saved → detection_post_6.png
+2026-05-18 14:09:13,805  INFO      Moving to Notes icon at (1732, 92) and double-clicking
+2026-05-18 14:09:23,333  WARNING   Notes did not start within 8 seconds
+2026-05-18 14:09:23,334  WARNING   Double-click timed out — trying 'open -a Notes' as fallback
+2026-05-18 14:09:23,565  INFO      File written: post_6.txt
+2026-05-18 14:09:24,065  INFO      Note created in Notes app
+2026-05-18 14:09:24,942  INFO      Notes closed
+2026-05-18 14:09:24,943  INFO      Done — post_6.txt saved successfully
+2026-05-18 14:09:25,348  INFO      
+2026-05-18 14:09:25,348  INFO      =======================================================
+2026-05-18 14:09:25,348  INFO      Processing post 7 of 10  (id=7)
+2026-05-18 14:09:25,348  INFO      =======================================================
+2026-05-18 14:09:27,918  INFO      Detection attempt 1 of 3
+2026-05-18 14:09:29,361  INFO      [template match]  found at (1732, 92)  conf=0.785
+2026-05-18 14:09:29,972  INFO      Detection screenshot saved → detection_post_7.png
+2026-05-18 14:09:31,070  INFO      Moving to Notes icon at (1732, 92) and double-clicking
+2026-05-18 14:09:40,742  WARNING   Notes did not start within 8 seconds
+2026-05-18 14:09:40,744  WARNING   Double-click timed out — trying 'open -a Notes' as fallback
+2026-05-18 14:09:40,986  INFO      File written: post_7.txt
+2026-05-18 14:09:41,559  INFO      Note created in Notes app
+2026-05-18 14:09:42,488  INFO      Notes closed
+2026-05-18 14:09:42,488  INFO      Done — post_7.txt saved successfully
+2026-05-18 14:09:42,893  INFO      
+2026-05-18 14:09:42,893  INFO      =======================================================
+2026-05-18 14:09:42,893  INFO      Processing post 8 of 10  (id=8)
+2026-05-18 14:09:42,893  INFO      =======================================================
+2026-05-18 14:09:45,386  INFO      Detection attempt 1 of 3
+2026-05-18 14:09:49,430  INFO      [OCR detection]  found at (663, 466)  conf=0.996
+2026-05-18 14:09:49,911  INFO      Detection screenshot saved → detection_post_8.png
+2026-05-18 14:09:51,043  INFO      Moving to Notes icon at (663, 466) and double-clicking
+2026-05-18 14:10:00,643  WARNING   Notes did not start within 8 seconds
+2026-05-18 14:10:00,644  WARNING   Double-click timed out — trying 'open -a Notes' as fallback
+2026-05-18 14:10:00,911  INFO      File written: post_8.txt
+2026-05-18 14:10:01,367  INFO      Note created in Notes app
+2026-05-18 14:10:02,250  INFO      Notes closed
+2026-05-18 14:10:02,250  INFO      Done — post_8.txt saved successfully
+2026-05-18 14:10:02,655  INFO      
+2026-05-18 14:10:02,656  INFO      =======================================================
+2026-05-18 14:10:02,656  INFO      Processing post 9 of 10  (id=9)
+2026-05-18 14:10:02,656  INFO      =======================================================
+2026-05-18 14:10:05,203  INFO      Detection attempt 1 of 3
+2026-05-18 14:10:06,677  INFO      [template match]  found at (1732, 92)  conf=0.792
+2026-05-18 14:10:07,285  INFO      Detection screenshot saved → detection_post_9.png
+2026-05-18 14:10:08,376  INFO      Moving to Notes icon at (1732, 92) and double-clicking
+2026-05-18 14:10:18,005  WARNING   Notes did not start within 8 seconds
+2026-05-18 14:10:18,005  WARNING   Double-click timed out — trying 'open -a Notes' as fallback
+2026-05-18 14:10:18,232  INFO      File written: post_9.txt
+2026-05-18 14:10:18,736  INFO      Note created in Notes app
+2026-05-18 14:10:19,605  INFO      Notes closed
+2026-05-18 14:10:19,605  INFO      Done — post_9.txt saved successfully
+2026-05-18 14:10:20,010  INFO      
+2026-05-18 14:10:20,010  INFO      =======================================================
+2026-05-18 14:10:20,010  INFO      Processing post 10 of 10  (id=10)
+2026-05-18 14:10:20,010  INFO      =======================================================
+2026-05-18 14:10:22,632  INFO      Detection attempt 1 of 3
+2026-05-18 14:10:24,166  INFO      [template match]  found at (1732, 92)  conf=0.785
+2026-05-18 14:10:24,379  INFO      Detection screenshot saved → detection_post_10.png
+2026-05-18 14:10:25,467  INFO      Moving to Notes icon at (1732, 92) and double-clicking
+2026-05-18 14:10:27,986  INFO      Notes is open
+2026-05-18 14:10:27,987  INFO      File written: post_10.txt
+2026-05-18 14:10:28,614  INFO      Note created in Notes app
+2026-05-18 14:10:29,495  INFO      Notes closed
+2026-05-18 14:10:29,495  INFO      Done — post_10.txt saved successfully
+2026-05-18 14:10:29,901  INFO      
+2026-05-18 14:10:29,901  INFO      =======================================================
+2026-05-18 14:10:29,901  INFO      Finished — 10 saved,  0 failed
+2026-05-18 14:10:29,901  INFO      Files   → /Users/abdulrahmanmagdy/Desktop/tjm-project
+2026-05-18 14:10:29,901  INFO      Screenshots → /Users/abdulrahmanmagdy/Desktop/tjm-project/detection_screenshots
+2026-05-18 14:10:29,901  INFO      =======================================================
+2026-05-18 14:11:51,323  INFO      =======================================================
+2026-05-18 14:11:51,325  INFO      Vision-Based Desktop Automation — macOS
+2026-05-18 14:11:51,325  INFO      =======================================================
+2026-05-18 14:11:51,382  WARNING   API unavailable (HTTPSConnectionPool(host='jsonplaceholder.typicode.com', port=443): Max retries exceeded with url: /posts (Caused by NameResolutionError("HTTPSConnection(host='jsonplaceholder.typicode.com', port=443): Failed to resolve 'jsonplaceholder.typicode.com' ([Errno 8] nodename nor servname provided, or not known)"))) — using offline fallback data
+2026-05-18 14:11:51,382  INFO      Loaded 10 posts
+2026-05-18 14:11:51,388  INFO      Template image loaded: notes_icon.png  (196, 172)
+2026-05-18 14:11:51,388  INFO      
+2026-05-18 14:11:51,388  INFO      =======================================================
+2026-05-18 14:11:51,388  INFO      Processing post 1 of 10  (id=1)
+2026-05-18 14:11:51,388  INFO      =======================================================
+2026-05-18 14:11:53,889  INFO      Detection attempt 1 of 3
+2026-05-18 14:11:55,494  INFO      [template match]  found at (1732, 92)  conf=0.785
+2026-05-18 14:11:56,100  INFO      Detection screenshot saved → detection_post_1.png
+2026-05-18 14:11:57,221  INFO      Moving to Notes icon at (1732, 92) and double-clicking
+2026-05-18 14:12:06,855  WARNING   Notes did not start within 8 seconds
+2026-05-18 14:12:06,856  WARNING   Double-click timed out — trying 'open -a Notes' as fallback
+2026-05-18 14:12:07,115  INFO      File written: post_1.txt
+2026-05-18 14:12:07,598  INFO      Note created in Notes app
+2026-05-18 14:12:08,471  INFO      Notes closed
+2026-05-18 14:12:08,471  INFO      Done — post_1.txt saved successfully
+2026-05-18 14:12:08,876  INFO      
+2026-05-18 14:12:08,876  INFO      =======================================================
+2026-05-18 14:12:08,877  INFO      Processing post 2 of 10  (id=2)
+2026-05-18 14:12:08,877  INFO      =======================================================
+2026-05-18 14:12:11,438  INFO      Detection attempt 1 of 3
+2026-05-18 14:12:12,894  INFO      [template match]  found at (1732, 92)  conf=0.785
+2026-05-18 14:12:13,488  INFO      Detection screenshot saved → detection_post_2.png
+2026-05-18 14:12:14,582  INFO      Moving to Notes icon at (1732, 92) and double-clicking
+2026-05-18 14:12:22,678  INFO      Stopped by user (Ctrl+C)
+2026-05-18 14:12:23,018  INFO      Notes force-quit
+2026-05-18 14:12:23,019  INFO      
+2026-05-18 14:12:23,019  INFO      =======================================================
+2026-05-18 14:12:23,019  INFO      Finished — 1 saved,  0 failed
+2026-05-18 14:12:23,020  INFO      Files   → /Users/abdulrahmanmagdy/Desktop/tjm-project
+2026-05-18 14:12:23,020  INFO      Screenshots → /Users/abdulrahmanmagdy/Desktop/tjm-project/detection_screenshots
+2026-05-18 14:12:23,020  INFO      =======================================================
+2026-05-18 14:13:58,782  INFO      =======================================================
+2026-05-18 14:13:58,786  INFO      Vision-Based Desktop Automation — macOS
+2026-05-18 14:13:58,786  INFO      =======================================================
+2026-05-18 14:14:06,440  WARNING   API unavailable (HTTPSConnectionPool(host='jsonplaceholder.typicode.com', port=443): Max retries exceeded with url: /posts (Caused by NameResolutionError("HTTPSConnection(host='jsonplaceholder.typicode.com', port=443): Failed to resolve 'jsonplaceholder.typicode.com' ([Errno 8] nodename nor servname provided, or not known)"))) — using offline fallback data
+2026-05-18 14:14:06,441  INFO      Loaded 10 posts
+2026-05-18 14:14:06,451  INFO      Template image loaded: notes_icon.png  (196, 172)
+2026-05-18 14:14:06,451  INFO      
+2026-05-18 14:14:06,451  INFO      =======================================================
+2026-05-18 14:14:06,451  INFO      Processing post 1 of 10  (id=1)
+2026-05-18 14:14:06,451  INFO      =======================================================
+2026-05-18 14:14:08,983  INFO      Detection attempt 1 of 3
+2026-05-18 14:14:10,413  INFO      [template match]  found at (1732, 92)  conf=0.792
+2026-05-18 14:14:11,008  INFO      Detection screenshot saved → detection_post_1.png
+2026-05-18 14:14:11,008  INFO      Moving to Notes icon at (1732, 92) and double-clicking
+2026-05-18 14:14:21,494  WARNING   Notes did not start within 8 seconds
+2026-05-18 14:14:21,495  WARNING   Double-click timed out — trying 'open -a Notes' as fallback
+2026-05-18 14:14:21,728  INFO      File written: post_1.txt
+2026-05-18 14:14:22,211  INFO      Note created in Notes app
+2026-05-18 14:14:23,089  INFO      Notes closed
+2026-05-18 14:14:23,089  INFO      Done — post_1.txt saved successfully
+2026-05-18 14:14:23,494  INFO      
+2026-05-18 14:14:23,494  INFO      =======================================================
+2026-05-18 14:14:23,495  INFO      Processing post 2 of 10  (id=2)
+2026-05-18 14:14:23,495  INFO      =======================================================
+2026-05-18 14:14:26,055  INFO      Detection attempt 1 of 3
+2026-05-18 14:14:27,489  INFO      [template match]  found at (1732, 92)  conf=0.785
+2026-05-18 14:14:28,088  INFO      Detection screenshot saved → detection_post_2.png
+2026-05-18 14:14:28,089  INFO      Moving to Notes icon at (1732, 92) and double-clicking
+2026-05-18 14:14:38,513  WARNING   Notes did not start within 8 seconds
+2026-05-18 14:14:38,514  WARNING   Double-click timed out — trying 'open -a Notes' as fallback
+2026-05-18 14:14:38,766  INFO      File written: post_2.txt
+2026-05-18 14:14:39,397  INFO      Note created in Notes app
+2026-05-18 14:14:40,332  INFO      Notes closed
+2026-05-18 14:14:40,332  INFO      Done — post_2.txt saved successfully
+2026-05-18 14:14:40,737  INFO      
+2026-05-18 14:14:40,738  INFO      =======================================================
+2026-05-18 14:14:40,738  INFO      Processing post 3 of 10  (id=3)
+2026-05-18 14:14:40,738  INFO      =======================================================
+2026-05-18 14:14:43,235  INFO      Detection attempt 1 of 3
+2026-05-18 14:14:43,722  INFO      Stopped by user (Ctrl+C)
+2026-05-18 14:14:44,037  INFO      Notes force-quit
+2026-05-18 14:14:44,042  INFO      
+2026-05-18 14:14:44,042  INFO      =======================================================
+2026-05-18 14:14:44,042  INFO      Finished — 2 saved,  0 failed
+2026-05-18 14:14:44,042  INFO      Files   → /Users/abdulrahmanmagdy/Desktop/tjm-project
+2026-05-18 14:14:44,042  INFO      Screenshots → /Users/abdulrahmanmagdy/Desktop/tjm-project/detection_screenshots
+2026-05-18 14:14:44,042  INFO      =======================================================
+2026-05-18 14:15:00,509  INFO      =======================================================
+2026-05-18 14:15:00,512  INFO      Vision-Based Desktop Automation — macOS
+2026-05-18 14:15:00,512  INFO      =======================================================
+2026-05-18 14:15:00,515  WARNING   API unavailable (HTTPSConnectionPool(host='jsonplaceholder.typicode.com', port=443): Max retries exceeded with url: /posts (Caused by NameResolutionError("HTTPSConnection(host='jsonplaceholder.typicode.com', port=443): Failed to resolve 'jsonplaceholder.typicode.com' ([Errno 8] nodename nor servname provided, or not known)"))) — using offline fallback data
+2026-05-18 14:15:00,515  INFO      Loaded 10 posts
+2026-05-18 14:15:00,517  INFO      Template image loaded: notes_icon.png  (196, 172)
+2026-05-18 14:15:00,517  INFO      
+2026-05-18 14:15:00,517  INFO      =======================================================
+2026-05-18 14:15:00,517  INFO      Processing post 1 of 10  (id=1)
+2026-05-18 14:15:00,517  INFO      =======================================================
+2026-05-18 14:15:03,026  INFO      Detection attempt 1 of 3
+2026-05-18 14:15:04,487  INFO      [template match]  found at (1732, 92)  conf=0.792
+2026-05-18 14:15:05,163  INFO      Detection screenshot saved → detection_post_1.png
+2026-05-18 14:15:05,164  INFO      Moving to Notes icon at (1732, 92) and double-clicking
+2026-05-18 14:15:15,679  WARNING   Notes did not start within 8 seconds
+2026-05-18 14:15:15,680  WARNING   Double-click timed out — trying 'open -a Notes' as fallback
+2026-05-18 14:15:15,884  INFO      File written: post_1.txt
+2026-05-18 14:15:16,401  INFO      Note created in Notes app
+2026-05-18 14:15:17,289  INFO      Notes closed
+2026-05-18 14:15:17,289  INFO      Done — post_1.txt saved successfully
+2026-05-18 14:15:17,695  INFO      
+2026-05-18 14:15:17,695  INFO      =======================================================
+2026-05-18 14:15:17,695  INFO      Processing post 2 of 10  (id=2)
+2026-05-18 14:15:17,695  INFO      =======================================================
+2026-05-18 14:15:20,473  INFO      Detection attempt 1 of 3
+2026-05-18 14:15:21,909  INFO      [template match]  found at (1732, 92)  conf=0.785
+2026-05-18 14:15:22,516  INFO      Detection screenshot saved → detection_post_2.png
+2026-05-18 14:15:22,516  INFO      Moving to Notes icon at (1732, 92) and double-clicking
+2026-05-18 14:15:32,957  WARNING   Notes did not start within 8 seconds
+2026-05-18 14:15:32,958  WARNING   Double-click timed out — trying 'open -a Notes' as fallback
+2026-05-18 14:15:33,189  INFO      File written: post_2.txt
+2026-05-18 14:15:33,716  INFO      Note created in Notes app
+2026-05-18 14:15:34,652  INFO      Notes closed
+2026-05-18 14:15:34,652  INFO      Done — post_2.txt saved successfully
+2026-05-18 14:15:35,057  INFO      
+2026-05-18 14:15:35,057  INFO      =======================================================
+2026-05-18 14:15:35,058  INFO      Processing post 3 of 10  (id=3)
+2026-05-18 14:15:35,058  INFO      =======================================================
+2026-05-18 14:15:37,698  INFO      Detection attempt 1 of 3
+2026-05-18 14:15:39,054  INFO      Stopped by user (Ctrl+C)
+2026-05-18 14:15:39,368  INFO      Notes force-quit
+2026-05-18 14:15:39,370  INFO      
+2026-05-18 14:15:39,370  INFO      =======================================================
+2026-05-18 14:15:39,370  INFO      Finished — 2 saved,  0 failed
+2026-05-18 14:15:39,371  INFO      Files   → /Users/abdulrahmanmagdy/Desktop/tjm-project
+2026-05-18 14:15:39,371  INFO      Screenshots → /Users/abdulrahmanmagdy/Desktop/tjm-project/detection_screenshots
+2026-05-18 14:15:39,371  INFO      =======================================================
+2026-05-18 14:24:02,334  INFO      =======================================================
+2026-05-18 14:24:02,335  INFO      Vision-Based Desktop Automation — macOS
+2026-05-18 14:24:02,335  INFO      =======================================================
+2026-05-18 14:24:02,406  WARNING   API unavailable (HTTPSConnectionPool(host='jsonplaceholder.typicode.com', port=443): Max retries exceeded with url: /posts (Caused by NameResolutionError("HTTPSConnection(host='jsonplaceholder.typicode.com', port=443): Failed to resolve 'jsonplaceholder.typicode.com' ([Errno 8] nodename nor servname provided, or not known)"))) — using offline fallback data
+2026-05-18 14:24:02,406  INFO      Loaded 10 posts
+2026-05-18 14:24:02,412  INFO      Template image loaded: notes_icon.png  (196, 172)
+2026-05-18 14:24:02,412  INFO      
+2026-05-18 14:24:02,412  INFO      =======================================================
+2026-05-18 14:24:02,412  INFO      Processing post 1 of 10  (id=1)
+2026-05-18 14:24:02,412  INFO      =======================================================
+2026-05-18 14:24:05,260  INFO      Detection attempt 1 of 3
+2026-05-18 14:24:07,726  INFO      [OCR detection]  found at (1726, 98)  conf=0.996
+2026-05-18 14:24:08,370  INFO      Detection screenshot saved → detection_post_1.png
+2026-05-18 14:24:08,370  INFO      Moving to Notes icon at (1726, 98) and double-clicking
+2026-05-18 14:24:18,431  WARNING   Notes did not start within 8 seconds
+2026-05-18 14:24:18,432  WARNING   Double-click timed out — trying 'open -a Notes' as fallback
+2026-05-18 14:24:18,651  INFO      File written: post_1.txt
+2026-05-18 14:24:19,583  INFO      Note created in Notes app
+2026-05-18 14:24:20,475  INFO      Notes closed
+2026-05-18 14:24:20,475  INFO      Done — post_1.txt saved successfully
+2026-05-18 14:24:20,881  INFO      
+2026-05-18 14:24:20,881  INFO      =======================================================
+2026-05-18 14:24:20,881  INFO      Processing post 2 of 10  (id=2)
+2026-05-18 14:24:20,881  INFO      =======================================================
+2026-05-18 14:24:23,672  INFO      Detection attempt 1 of 3
+2026-05-18 14:24:27,647  INFO      [OCR detection]  found at (786, 313)  conf=0.996
+2026-05-18 14:24:27,836  INFO      Detection screenshot saved → detection_post_2.png
+2026-05-18 14:24:27,836  INFO      Moving to Notes icon at (786, 313) and double-clicking
+2026-05-18 14:24:36,577  INFO      Stopped by user (Ctrl+C)
+2026-05-18 14:24:36,893  INFO      Notes force-quit
+2026-05-18 14:24:36,893  INFO      
+2026-05-18 14:24:36,893  INFO      =======================================================
+2026-05-18 14:24:36,893  INFO      Finished — 1 saved,  0 failed
+2026-05-18 14:24:36,894  INFO      Files   → /Users/abdulrahmanmagdy/Desktop/tjm-project
+2026-05-18 14:24:36,894  INFO      Screenshots → /Users/abdulrahmanmagdy/Desktop/tjm-project/detection_screenshots
+2026-05-18 14:24:36,894  INFO      =======================================================
+2026-05-18 14:29:01,838  INFO      =======================================================
+2026-05-18 14:29:01,839  INFO      Vision-Based Desktop Automation — macOS
+2026-05-18 14:29:01,839  INFO      =======================================================
+2026-05-18 14:29:02,085  WARNING   API unavailable (HTTPSConnectionPool(host='jsonplaceholder.typicode.com', port=443): Max retries exceeded with url: /posts (Caused by NameResolutionError("HTTPSConnection(host='jsonplaceholder.typicode.com', port=443): Failed to resolve 'jsonplaceholder.typicode.com' ([Errno 8] nodename nor servname provided, or not known)"))) — using offline fallback data
+2026-05-18 14:29:02,085  INFO      Loaded 10 posts
+2026-05-18 14:29:02,092  INFO      Template image loaded: notes_icon.png  (196, 172)
+2026-05-18 14:29:02,092  INFO      
+2026-05-18 14:29:02,092  INFO      =======================================================
+2026-05-18 14:29:02,092  INFO      Processing post 1 of 10  (id=1)
+2026-05-18 14:29:02,092  INFO      =======================================================
+2026-05-18 14:29:04,745  INFO      Detection attempt 1 of 3
+2026-05-18 14:29:07,352  INFO      [OCR detection]  found at (1516, 769)  conf=0.675
+2026-05-18 14:29:07,936  INFO      Detection screenshot saved → detection_post_1.png
+2026-05-18 14:29:07,936  INFO      Moving to Notes icon at (1516, 769) and double-clicking
+2026-05-18 14:29:18,970  WARNING   Notes did not start within 8 seconds
+2026-05-18 14:29:18,971  WARNING   Double-click timed out — trying 'open -a Notes' as fallback
+2026-05-18 14:29:19,211  INFO      File written: post_1.txt
+2026-05-18 14:29:19,744  INFO      Note created in Notes app
+2026-05-18 14:29:20,632  INFO      Notes closed
+2026-05-18 14:29:20,632  INFO      Done — post_1.txt saved successfully
+2026-05-18 14:29:21,037  INFO      
+2026-05-18 14:29:21,038  INFO      =======================================================
+2026-05-18 14:29:21,038  INFO      Processing post 2 of 10  (id=2)
+2026-05-18 14:29:21,038  INFO      =======================================================
+2026-05-18 14:29:23,841  INFO      Detection attempt 1 of 3
+2026-05-18 14:29:27,770  INFO      [OCR detection]  found at (786, 313)  conf=0.996
+2026-05-18 14:29:27,980  INFO      Detection screenshot saved → detection_post_2.png
+2026-05-18 14:29:27,980  INFO      Moving to Notes icon at (786, 313) and double-clicking
+2026-05-18 14:29:38,964  WARNING   Notes did not start within 8 seconds
+2026-05-18 14:29:38,965  WARNING   Double-click timed out — trying 'open -a Notes' as fallback
+2026-05-18 14:29:39,210  INFO      File written: post_2.txt
+2026-05-18 14:29:39,689  INFO      Note created in Notes app
+2026-05-18 14:29:40,580  INFO      Notes closed
+2026-05-18 14:29:40,580  INFO      Done — post_2.txt saved successfully
+2026-05-18 14:29:40,986  INFO      
+2026-05-18 14:29:40,986  INFO      =======================================================
+2026-05-18 14:29:40,986  INFO      Processing post 3 of 10  (id=3)
+2026-05-18 14:29:40,986  INFO      =======================================================
+2026-05-18 14:29:43,757  INFO      Detection attempt 1 of 3
+2026-05-18 14:29:47,662  INFO      [OCR detection]  found at (786, 313)  conf=0.996
+2026-05-18 14:29:47,856  INFO      Detection screenshot saved → detection_post_3.png
+2026-05-18 14:29:47,856  INFO      Moving to Notes icon at (786, 313) and double-clicking
+2026-05-18 14:29:58,837  WARNING   Notes did not start within 8 seconds
+2026-05-18 14:29:58,838  WARNING   Double-click timed out — trying 'open -a Notes' as fallback
+2026-05-18 14:29:59,059  INFO      File written: post_3.txt
+2026-05-18 14:29:59,652  INFO      Note created in Notes app
+2026-05-18 14:30:00,614  INFO      Notes closed
+2026-05-18 14:30:00,615  INFO      Done — post_3.txt saved successfully
+2026-05-18 14:30:01,020  INFO      
+2026-05-18 14:30:01,020  INFO      =======================================================
+2026-05-18 14:30:01,020  INFO      Processing post 4 of 10  (id=4)
+2026-05-18 14:30:01,020  INFO      =======================================================
+2026-05-18 14:30:03,583  INFO      Stopped by user (Ctrl+C)
+2026-05-18 14:30:03,915  INFO      Notes force-quit
+2026-05-18 14:30:03,916  INFO      
+2026-05-18 14:30:03,916  INFO      =======================================================
+2026-05-18 14:30:03,916  INFO      Finished — 3 saved,  0 failed
+2026-05-18 14:30:03,916  INFO      Files   → /Users/abdulrahmanmagdy/Desktop/tjm-project
+2026-05-18 14:30:03,916  INFO      Screenshots → /Users/abdulrahmanmagdy/Desktop/tjm-project/detection_screenshots
+2026-05-18 14:30:03,916  INFO      =======================================================
+2026-05-18 14:34:26,650  INFO      =======================================================
+2026-05-18 14:34:26,653  INFO      Vision-Based Desktop Automation — macOS
+2026-05-18 14:34:26,653  INFO      =======================================================
+2026-05-18 14:34:28,315  WARNING   API unavailable (HTTPSConnectionPool(host='jsonplaceholder.typicode.com', port=443): Max retries exceeded with url: /posts (Caused by NameResolutionError("HTTPSConnection(host='jsonplaceholder.typicode.com', port=443): Failed to resolve 'jsonplaceholder.typicode.com' ([Errno 8] nodename nor servname provided, or not known)"))) — using offline fallback data
+2026-05-18 14:34:28,316  INFO      Loaded 10 posts
+2026-05-18 14:34:28,324  INFO      Template image loaded: notes_icon.png  (196, 172)
+2026-05-18 14:34:28,324  INFO      
+2026-05-18 14:34:28,324  INFO      =======================================================
+2026-05-18 14:34:28,324  INFO      Processing post 1 of 10  (id=1)
+2026-05-18 14:34:28,324  INFO      =======================================================
+2026-05-18 14:34:31,036  INFO      Detection attempt 1 of 3
+2026-05-18 14:34:33,581  INFO      [OCR detection]  found at (1516, 769)  conf=0.675
+2026-05-18 14:34:34,177  INFO      Detection screenshot saved → detection_post_1.png
+2026-05-18 14:34:34,178  INFO      Moving to Notes icon at (1516, 769) and double-clicking
+2026-05-18 14:34:43,934  WARNING   Notes did not start within 8 seconds
+2026-05-18 14:34:43,934  WARNING   Double-click timed out — trying 'open -a Notes' as fallback
+2026-05-18 14:34:44,161  INFO      File written: post_1.txt
+2026-05-18 14:34:44,682  INFO      Note created in Notes app
+2026-05-18 14:34:45,568  INFO      Notes closed
+2026-05-18 14:34:45,569  INFO      Done — post_1.txt saved successfully
+2026-05-18 14:34:45,974  INFO      
+2026-05-18 14:34:45,974  INFO      =======================================================
+2026-05-18 14:34:45,974  INFO      Processing post 2 of 10  (id=2)
+2026-05-18 14:34:45,974  INFO      =======================================================
+2026-05-18 14:34:48,571  INFO      Detection attempt 1 of 3
+2026-05-18 14:34:51,035  INFO      [OCR detection]  found at (1127, 1131)  conf=0.618
+2026-05-18 14:34:51,619  INFO      Detection screenshot saved → detection_post_2.png
+2026-05-18 14:34:51,620  INFO      Moving to Notes icon at (1127, 1131) and double-clicking
+2026-05-18 14:35:01,366  WARNING   Notes did not start within 8 seconds
+2026-05-18 14:35:01,366  WARNING   Double-click timed out — trying 'open -a Notes' as fallback
+2026-05-18 14:35:01,560  INFO      File written: post_2.txt
+2026-05-18 14:35:02,047  INFO      Note created in Notes app
+2026-05-18 14:35:02,948  INFO      Notes closed
+2026-05-18 14:35:02,949  INFO      Done — post_2.txt saved successfully
+2026-05-18 14:35:03,350  INFO      
+2026-05-18 14:35:03,351  INFO      =======================================================
+2026-05-18 14:35:03,351  INFO      Processing post 3 of 10  (id=3)
+2026-05-18 14:35:03,351  INFO      =======================================================
+2026-05-18 14:35:05,332  INFO      Stopped by user (Ctrl+C)
+2026-05-18 14:35:05,664  INFO      Notes force-quit
+2026-05-18 14:35:05,665  INFO      
+2026-05-18 14:35:05,665  INFO      =======================================================
+2026-05-18 14:35:05,665  INFO      Finished — 2 saved,  0 failed
+2026-05-18 14:35:05,665  INFO      Files   → /Users/abdulrahmanmagdy/Desktop/tjm-project
+2026-05-18 14:35:05,665  INFO      Screenshots → /Users/abdulrahmanmagdy/Desktop/tjm-project/detection_screenshots
+2026-05-18 14:35:05,666  INFO      =======================================================
+2026-05-18 14:38:18,724  INFO      =======================================================
+2026-05-18 14:38:18,726  INFO      Vision-Based Desktop Automation — macOS
+2026-05-18 14:38:18,726  INFO      =======================================================
+2026-05-18 14:38:18,802  WARNING   API unavailable (HTTPSConnectionPool(host='jsonplaceholder.typicode.com', port=443): Max retries exceeded with url: /posts (Caused by NameResolutionError("HTTPSConnection(host='jsonplaceholder.typicode.com', port=443): Failed to resolve 'jsonplaceholder.typicode.com' ([Errno 8] nodename nor servname provided, or not known)"))) — using offline fallback data
+2026-05-18 14:38:18,802  INFO      Loaded 10 posts
+2026-05-18 14:38:18,811  INFO      Template image loaded: notes_icon.png  (196, 172)
+2026-05-18 14:38:18,811  INFO      
+2026-05-18 14:38:18,811  INFO      =======================================================
+2026-05-18 14:38:18,811  INFO      Processing post 1 of 10  (id=1)
+2026-05-18 14:38:18,811  INFO      =======================================================
+2026-05-18 14:38:22,072  INFO      Detection attempt 1 of 3
+2026-05-18 14:38:24,586  INFO      [OCR detection]  found at (1516, 769)  conf=0.675
+2026-05-18 14:38:25,162  INFO      Detection screenshot saved → detection_post_1.png
+2026-05-18 14:38:25,162  INFO      Moving to Notes icon at (1516, 769) and double-clicking
+2026-05-18 14:38:34,798  WARNING   Notes did not start within 8 seconds
+2026-05-18 14:38:34,799  WARNING   Double-click timed out — trying 'open -a Notes' as fallback
+2026-05-18 14:38:35,038  INFO      File written: post_1.txt
+2026-05-18 14:38:35,572  INFO      Note created in Notes app
+2026-05-18 14:38:36,463  INFO      Notes closed
+2026-05-18 14:38:36,464  INFO      Done — post_1.txt saved successfully
+2026-05-18 14:38:36,869  INFO      
+2026-05-18 14:38:36,869  INFO      =======================================================
+2026-05-18 14:38:36,869  INFO      Processing post 2 of 10  (id=2)
+2026-05-18 14:38:36,870  INFO      =======================================================
+2026-05-18 14:38:40,092  INFO      Detection attempt 1 of 3
+2026-05-18 14:38:42,528  INFO      [OCR detection]  found at (1127, 1131)  conf=0.618
+2026-05-18 14:38:43,132  INFO      Detection screenshot saved → detection_post_2.png
+2026-05-18 14:38:43,132  INFO      Moving to Notes icon at (1127, 1131) and double-clicking
+2026-05-18 14:38:52,988  WARNING   Notes did not start within 8 seconds
+2026-05-18 14:38:52,989  WARNING   Double-click timed out — trying 'open -a Notes' as fallback
+2026-05-18 14:38:53,192  INFO      File written: post_2.txt
+2026-05-18 14:38:53,849  INFO      Note created in Notes app
+2026-05-18 14:38:54,768  INFO      Notes closed
+2026-05-18 14:38:54,768  INFO      Done — post_2.txt saved successfully
+2026-05-18 14:38:55,173  INFO      
+2026-05-18 14:38:55,173  INFO      =======================================================
+2026-05-18 14:38:55,174  INFO      Processing post 3 of 10  (id=3)
+2026-05-18 14:38:55,174  INFO      =======================================================
+2026-05-18 14:38:56,826  INFO      Stopped by user (Ctrl+C)
+2026-05-18 14:38:57,155  INFO      Notes force-quit
+2026-05-18 14:38:57,156  INFO      
+2026-05-18 14:38:57,156  INFO      =======================================================
+2026-05-18 14:38:57,156  INFO      Finished — 2 saved,  0 failed
+2026-05-18 14:38:57,156  INFO      Files   → /Users/abdulrahmanmagdy/Desktop/tjm-project
+2026-05-18 14:38:57,156  INFO      Screenshots → /Users/abdulrahmanmagdy/Desktop/tjm-project/detection_screenshots
+2026-05-18 14:38:57,156  INFO      =======================================================
+2026-05-18 14:39:47,325  INFO      =======================================================
+2026-05-18 14:39:47,326  INFO      Vision-Based Desktop Automation — macOS
+2026-05-18 14:39:47,326  INFO      =======================================================
+2026-05-18 14:39:47,365  WARNING   API unavailable (HTTPSConnectionPool(host='jsonplaceholder.typicode.com', port=443): Max retries exceeded with url: /posts (Caused by NameResolutionError("HTTPSConnection(host='jsonplaceholder.typicode.com', port=443): Failed to resolve 'jsonplaceholder.typicode.com' ([Errno 8] nodename nor servname provided, or not known)"))) — using offline fallback data
+2026-05-18 14:39:47,365  INFO      Loaded 10 posts
+2026-05-18 14:39:47,372  INFO      Template image loaded: notes_icon.png  (196, 172)
+2026-05-18 14:39:47,372  INFO      
+2026-05-18 14:39:47,372  INFO      =======================================================
+2026-05-18 14:39:47,372  INFO      Processing post 1 of 10  (id=1)
+2026-05-18 14:39:47,372  INFO      =======================================================
+2026-05-18 14:39:50,635  INFO      Detection attempt 1 of 3
+2026-05-18 14:39:52,092  INFO      [template match]  found at (1732, 92)  conf=0.792
+2026-05-18 14:39:52,695  INFO      Detection screenshot saved → detection_post_1.png
+2026-05-18 14:39:52,695  INFO      Moving to Notes icon at (1732, 92) and double-clicking
+2026-05-18 14:40:02,550  WARNING   Notes did not start within 8 seconds
+2026-05-18 14:40:02,551  WARNING   Double-click timed out — trying 'open -a Notes' as fallback
+2026-05-18 14:40:02,775  INFO      File written: post_1.txt
+2026-05-18 14:40:03,293  INFO      Note created in Notes app
+2026-05-18 14:40:04,184  INFO      Notes closed
+2026-05-18 14:40:04,184  INFO      Done — post_1.txt saved successfully
+2026-05-18 14:40:04,587  INFO      
+2026-05-18 14:40:04,587  INFO      =======================================================
+2026-05-18 14:40:04,587  INFO      Processing post 2 of 10  (id=2)
+2026-05-18 14:40:04,588  INFO      =======================================================
+2026-05-18 14:40:07,905  INFO      Detection attempt 1 of 3
+2026-05-18 14:40:09,346  INFO      [template match]  found at (1732, 92)  conf=0.785
+2026-05-18 14:40:09,946  INFO      Detection screenshot saved → detection_post_2.png
+2026-05-18 14:40:09,947  INFO      Moving to Notes icon at (1732, 92) and double-clicking
+2026-05-18 14:40:19,684  WARNING   Notes did not start within 8 seconds
+2026-05-18 14:40:19,684  WARNING   Double-click timed out — trying 'open -a Notes' as fallback
+2026-05-18 14:40:19,925  INFO      File written: post_2.txt
+2026-05-18 14:40:20,380  INFO      Note created in Notes app
+2026-05-18 14:40:21,258  INFO      Notes closed
+2026-05-18 14:40:21,258  INFO      Done — post_2.txt saved successfully
+2026-05-18 14:40:21,663  INFO      
+2026-05-18 14:40:21,664  INFO      =======================================================
+2026-05-18 14:40:21,664  INFO      Processing post 3 of 10  (id=3)
+2026-05-18 14:40:21,664  INFO      =======================================================
+2026-05-18 14:40:25,064  INFO      Detection attempt 1 of 3
+2026-05-18 14:40:26,596  INFO      [template match]  found at (1732, 92)  conf=0.785
+2026-05-18 14:40:26,626  INFO      Stopped by user (Ctrl+C)
+2026-05-18 14:40:26,943  INFO      Notes force-quit
+2026-05-18 14:40:26,944  INFO      
+2026-05-18 14:40:26,944  INFO      =======================================================
+2026-05-18 14:40:26,944  INFO      Finished — 2 saved,  0 failed
+2026-05-18 14:40:26,944  INFO      Files   → /Users/abdulrahmanmagdy/Desktop/tjm-project
+2026-05-18 14:40:26,945  INFO      Screenshots → /Users/abdulrahmanmagdy/Desktop/tjm-project/detection_screenshots
+2026-05-18 14:40:26,945  INFO      =======================================================
+2026-05-18 14:42:20,779  INFO      =======================================================
+2026-05-18 14:42:20,781  INFO      Vision-Based Desktop Automation — macOS
+2026-05-18 14:42:20,781  INFO      =======================================================
+2026-05-18 14:42:26,606  WARNING   API unavailable (HTTPSConnectionPool(host='jsonplaceholder.typicode.com', port=443): Max retries exceeded with url: /posts (Caused by NameResolutionError("HTTPSConnection(host='jsonplaceholder.typicode.com', port=443): Failed to resolve 'jsonplaceholder.typicode.com' ([Errno 8] nodename nor servname provided, or not known)"))) — using offline fallback data
+2026-05-18 14:42:26,606  INFO      Loaded 10 posts
+2026-05-18 14:42:26,616  INFO      Template image loaded: notes_icon.png  (196, 172)
+2026-05-18 14:42:26,616  INFO      
+2026-05-18 14:42:26,617  INFO      =======================================================
+2026-05-18 14:42:26,617  INFO      Processing post 1 of 10  (id=1)
+2026-05-18 14:42:26,617  INFO      =======================================================
+2026-05-18 14:42:29,785  INFO      Detection attempt 1 of 3
+2026-05-18 14:42:31,219  INFO      [template match]  found at (1732, 92)  conf=0.785
+2026-05-18 14:42:31,825  INFO      Detection screenshot saved → detection_post_1.png
+2026-05-18 14:42:31,826  INFO      Moving to Notes icon at (1732, 92) and double-clicking
+2026-05-18 14:42:41,657  WARNING   Notes did not start within 8 seconds
+2026-05-18 14:42:41,658  WARNING   Double-click timed out — trying 'open -a Notes' as fallback
+2026-05-18 14:42:41,876  INFO      File written: post_1.txt
+2026-05-18 14:42:42,402  INFO      Note created in Notes app
+2026-05-18 14:42:43,287  INFO      Notes closed
+2026-05-18 14:42:43,287  INFO      Done — post_1.txt saved successfully
+2026-05-18 14:42:43,692  INFO      
+2026-05-18 14:42:43,692  INFO      =======================================================
+2026-05-18 14:42:43,692  INFO      Processing post 2 of 10  (id=2)
+2026-05-18 14:42:43,692  INFO      =======================================================
+2026-05-18 14:42:46,915  INFO      Detection attempt 1 of 3
+2026-05-18 14:42:48,345  INFO      [template match]  found at (1732, 92)  conf=0.785
+2026-05-18 14:42:48,947  INFO      Detection screenshot saved → detection_post_2.png
+2026-05-18 14:42:48,948  INFO      Moving to Notes icon at (1732, 92) and double-clicking
+2026-05-18 14:42:58,768  WARNING   Notes did not start within 8 seconds
+2026-05-18 14:42:58,768  WARNING   Double-click timed out — trying 'open -a Notes' as fallback
+2026-05-18 14:42:58,981  INFO      File written: post_2.txt
+2026-05-18 14:42:59,432  INFO      Note created in Notes app
+2026-05-18 14:43:00,307  INFO      Notes closed
+2026-05-18 14:43:00,307  INFO      Done — post_2.txt saved successfully
+2026-05-18 14:43:00,712  INFO      
+2026-05-18 14:43:00,712  INFO      =======================================================
+2026-05-18 14:43:00,712  INFO      Processing post 3 of 10  (id=3)
+2026-05-18 14:43:00,712  INFO      =======================================================
+2026-05-18 14:43:03,927  INFO      Detection attempt 1 of 3
+2026-05-18 14:43:05,394  INFO      [template match]  found at (1732, 92)  conf=0.792
+2026-05-18 14:43:05,988  INFO      Detection screenshot saved → detection_post_3.png
+2026-05-18 14:43:05,988  INFO      Moving to Notes icon at (1732, 92) and double-clicking
+2026-05-18 14:43:15,805  WARNING   Notes did not start within 8 seconds
+2026-05-18 14:43:15,807  WARNING   Double-click timed out — trying 'open -a Notes' as fallback
+2026-05-18 14:43:15,822  INFO      Stopped by user (Ctrl+C)
+2026-05-18 14:43:16,148  INFO      Notes force-quit
+2026-05-18 14:43:16,148  INFO      
+2026-05-18 14:43:16,148  INFO      =======================================================
+2026-05-18 14:43:16,148  INFO      Finished — 2 saved,  0 failed
+2026-05-18 14:43:16,148  INFO      Files   → /Users/abdulrahmanmagdy/Desktop/tjm-project
+2026-05-18 14:43:16,148  INFO      Screenshots → /Users/abdulrahmanmagdy/Desktop/tjm-project/detection_screenshots
+2026-05-18 14:43:16,148  INFO      =======================================================
+2026-05-18 14:46:56,267  INFO      =======================================================
+2026-05-18 14:46:56,269  INFO      Vision-Based Desktop Automation — macOS
+2026-05-18 14:46:56,269  INFO      =======================================================
+2026-05-18 14:46:56,507  WARNING   API unavailable (HTTPSConnectionPool(host='jsonplaceholder.typicode.com', port=443): Max retries exceeded with url: /posts (Caused by NameResolutionError("HTTPSConnection(host='jsonplaceholder.typicode.com', port=443): Failed to resolve 'jsonplaceholder.typicode.com' ([Errno 8] nodename nor servname provided, or not known)"))) — using offline fallback data
+2026-05-18 14:46:56,507  INFO      Loaded 10 posts
+2026-05-18 14:46:56,515  INFO      Template image loaded: notes_icon.png  (196, 172)
+2026-05-18 14:46:56,516  INFO      
+2026-05-18 14:46:56,516  INFO      =======================================================
+2026-05-18 14:46:56,516  INFO      Processing post 1 of 10  (id=1)
+2026-05-18 14:46:56,516  INFO      =======================================================
+2026-05-18 14:46:59,751  INFO      Detection attempt 1 of 3
+2026-05-18 14:47:04,134  INFO      [OCR detection]  found at (851, 267)  conf=0.996
+2026-05-18 14:47:04,665  INFO      Detection screenshot saved → detection_post_1.png
+2026-05-18 14:47:04,665  INFO      Moving to Notes icon at (851, 267) and double-clicking
+2026-05-18 14:47:14,465  WARNING   Notes did not start within 8 seconds
+2026-05-18 14:47:14,466  WARNING   Double-click timed out — trying 'open -a Notes' as fallback
+2026-05-18 14:47:14,687  INFO      File written: post_1.txt
+2026-05-18 14:47:15,209  INFO      Note created in Notes app
+2026-05-18 14:47:16,103  INFO      Notes closed
+2026-05-18 14:47:16,103  INFO      Done — post_1.txt saved successfully
+2026-05-18 14:47:16,508  INFO      
+2026-05-18 14:47:16,508  INFO      =======================================================
+2026-05-18 14:47:16,508  INFO      Processing post 2 of 10  (id=2)
+2026-05-18 14:47:16,508  INFO      =======================================================
+2026-05-18 14:47:19,747  INFO      Detection attempt 1 of 3
+2026-05-18 14:47:21,181  INFO      [template match]  found at (1732, 92)  conf=0.792
+2026-05-18 14:47:21,787  INFO      Detection screenshot saved → detection_post_2.png
+2026-05-18 14:47:21,788  INFO      Moving to Notes icon at (1732, 92) and double-clicking
+2026-05-18 14:47:31,662  WARNING   Notes did not start within 8 seconds
+2026-05-18 14:47:31,663  WARNING   Double-click timed out — trying 'open -a Notes' as fallback
+2026-05-18 14:47:31,884  INFO      File written: post_2.txt
+2026-05-18 14:47:32,379  INFO      Note created in Notes app
+2026-05-18 14:47:33,276  INFO      Notes closed
+2026-05-18 14:47:33,277  INFO      Done — post_2.txt saved successfully
+2026-05-18 14:47:33,682  INFO      
+2026-05-18 14:47:33,682  INFO      =======================================================
+2026-05-18 14:47:33,682  INFO      Processing post 3 of 10  (id=3)
+2026-05-18 14:47:33,682  INFO      =======================================================
+2026-05-18 14:47:36,888  INFO      Detection attempt 1 of 3
+2026-05-18 14:47:38,282  INFO      [template match]  found at (1732, 92)  conf=0.785
+2026-05-18 14:47:38,879  INFO      Detection screenshot saved → detection_post_3.png
+2026-05-18 14:47:38,879  INFO      Moving to Notes icon at (1732, 92) and double-clicking
+2026-05-18 14:47:48,674  WARNING   Notes did not start within 8 seconds
+2026-05-18 14:47:48,675  WARNING   Double-click timed out — trying 'open -a Notes' as fallback
+2026-05-18 14:47:48,899  INFO      File written: post_3.txt
+2026-05-18 14:47:49,369  INFO      Note created in Notes app
+2026-05-18 14:47:50,247  INFO      Notes closed
+2026-05-18 14:47:50,248  INFO      Done — post_3.txt saved successfully
+2026-05-18 14:47:50,653  INFO      
+2026-05-18 14:47:50,653  INFO      =======================================================
+2026-05-18 14:47:50,653  INFO      Processing post 4 of 10  (id=4)
+2026-05-18 14:47:50,653  INFO      =======================================================
+2026-05-18 14:47:52,681  INFO      Stopped by user (Ctrl+C)
+2026-05-18 14:47:53,012  INFO      Notes force-quit
+2026-05-18 14:47:53,013  INFO      
+2026-05-18 14:47:53,013  INFO      =======================================================
+2026-05-18 14:47:53,013  INFO      Finished — 3 saved,  0 failed
+2026-05-18 14:47:53,013  INFO      Files   → /Users/abdulrahmanmagdy/Desktop/tjm-project
+2026-05-18 14:47:53,013  INFO      Screenshots → /Users/abdulrahmanmagdy/Desktop/tjm-project/detection_screenshots
+2026-05-18 14:47:53,013  INFO      =======================================================
+2026-05-18 14:52:11,844  INFO      =======================================================
+2026-05-18 14:52:11,848  INFO      Vision-Based Desktop Automation — macOS
+2026-05-18 14:52:11,848  INFO      =======================================================
+2026-05-18 14:52:11,945  WARNING   API unavailable (HTTPSConnectionPool(host='jsonplaceholder.typicode.com', port=443): Max retries exceeded with url: /posts (Caused by NameResolutionError("HTTPSConnection(host='jsonplaceholder.typicode.com', port=443): Failed to resolve 'jsonplaceholder.typicode.com' ([Errno 8] nodename nor servname provided, or not known)"))) — using offline fallback data
+2026-05-18 14:52:11,945  INFO      Loaded 10 posts
+2026-05-18 14:52:11,953  INFO      Template image loaded: notes_icon.png  (196, 172)
+2026-05-18 14:52:11,953  INFO      
+2026-05-18 14:52:11,953  INFO      =======================================================
+2026-05-18 14:52:11,953  INFO      Processing post 1 of 10  (id=1)
+2026-05-18 14:52:11,953  INFO      =======================================================
+2026-05-18 14:52:15,098  INFO      Detection attempt 1 of 3
+2026-05-18 14:52:16,872  INFO      [template match]  found at (1732, 92)  conf=0.866
+2026-05-18 14:52:17,616  INFO      Detection screenshot saved → detection_post_1.png
+2026-05-18 14:52:17,617  INFO      Moving to Notes icon at (1732, 92) and double-clicking
+2026-05-18 14:52:18,234  WARNING   Failsafe triggered — mouse moved to corner, aborting launch
+2026-05-18 14:52:18,234  ERROR     Notes did not open — skipping this post
+2026-05-18 14:52:19,027  INFO      Notes closed
+2026-05-18 14:52:19,027  INFO      
+2026-05-18 14:52:19,027  INFO      =======================================================
+2026-05-18 14:52:19,027  INFO      Processing post 2 of 10  (id=2)
+2026-05-18 14:52:19,027  INFO      =======================================================
+2026-05-18 14:52:22,385  INFO      Detection attempt 1 of 3
+2026-05-18 14:52:23,906  INFO      [template match]  found at (104, 969)  conf=0.674
+2026-05-18 14:52:24,527  INFO      Detection screenshot saved → detection_post_2.png
+2026-05-18 14:52:24,527  INFO      Moving to Notes icon at (104, 969) and double-clicking
+2026-05-18 14:52:34,129  WARNING   Notes did not start within 8 seconds
+2026-05-18 14:52:34,130  WARNING   Double-click timed out — trying 'open -a Notes' as fallback
+2026-05-18 14:52:34,342  INFO      File written: post_2.txt
+2026-05-18 14:52:34,820  INFO      Note created in Notes app
+2026-05-18 14:52:35,704  INFO      Notes closed
+2026-05-18 14:52:35,705  INFO      Done — post_2.txt saved successfully
+2026-05-18 14:52:36,110  INFO      
+2026-05-18 14:52:36,110  INFO      =======================================================
+2026-05-18 14:52:36,110  INFO      Processing post 3 of 10  (id=3)
+2026-05-18 14:52:36,111  INFO      =======================================================
+2026-05-18 14:52:39,256  INFO      Detection attempt 1 of 3
+2026-05-18 14:52:40,678  INFO      [template match]  found at (1732, 92)  conf=0.792
+2026-05-18 14:52:41,276  INFO      Detection screenshot saved → detection_post_3.png
+2026-05-18 14:52:41,276  INFO      Moving to Notes icon at (1732, 92) and double-clicking
+2026-05-18 14:52:42,851  INFO      Notes is open
+2026-05-18 14:52:42,852  INFO      File written: post_3.txt
+2026-05-18 14:52:43,049  INFO      Note created in Notes app
+2026-05-18 14:52:43,917  INFO      Notes closed
+2026-05-18 14:52:43,918  INFO      Done — post_3.txt saved successfully
+2026-05-18 14:52:44,323  INFO      
+2026-05-18 14:52:44,323  INFO      =======================================================
+2026-05-18 14:52:44,323  INFO      Processing post 4 of 10  (id=4)
+2026-05-18 14:52:44,323  INFO      =======================================================
+2026-05-18 14:52:47,473  INFO      Detection attempt 1 of 3
+2026-05-18 14:52:48,912  INFO      [template match]  found at (1732, 92)  conf=0.785
+2026-05-18 14:52:49,513  INFO      Detection screenshot saved → detection_post_4.png
+2026-05-18 14:52:49,513  INFO      Moving to Notes icon at (1732, 92) and double-clicking
+2026-05-18 14:52:51,088  INFO      Notes is open
+2026-05-18 14:52:51,089  INFO      File written: post_4.txt
+2026-05-18 14:52:51,300  INFO      Note created in Notes app
+2026-05-18 14:52:52,172  INFO      Notes closed
+2026-05-18 14:52:52,172  INFO      Done — post_4.txt saved successfully
+2026-05-18 14:52:52,577  INFO      
+2026-05-18 14:52:52,577  INFO      =======================================================
+2026-05-18 14:52:52,578  INFO      Processing post 5 of 10  (id=5)
+2026-05-18 14:52:52,578  INFO      =======================================================
+2026-05-18 14:52:55,716  INFO      Detection attempt 1 of 3
+2026-05-18 14:52:57,123  INFO      [template match]  found at (1732, 92)  conf=0.785
+2026-05-18 14:52:57,722  INFO      Detection screenshot saved → detection_post_5.png
+2026-05-18 14:52:57,723  INFO      Moving to Notes icon at (1732, 92) and double-clicking
+2026-05-18 14:52:59,302  INFO      Notes is open
+2026-05-18 14:52:59,302  INFO      File written: post_5.txt
+2026-05-18 14:52:59,508  INFO      Note created in Notes app
+2026-05-18 14:53:00,359  INFO      Notes closed
+2026-05-18 14:53:00,360  INFO      Done — post_5.txt saved successfully
+2026-05-18 14:53:00,765  INFO      
+2026-05-18 14:53:00,765  INFO      =======================================================
+2026-05-18 14:53:00,766  INFO      Processing post 6 of 10  (id=6)
+2026-05-18 14:53:00,766  INFO      =======================================================
+2026-05-18 14:53:03,917  INFO      Detection attempt 1 of 3
+2026-05-18 14:53:05,413  INFO      [template match]  found at (1732, 92)  conf=0.785
+2026-05-18 14:53:06,008  INFO      Detection screenshot saved → detection_post_6.png
+2026-05-18 14:53:06,008  INFO      Moving to Notes icon at (1732, 92) and double-clicking
+2026-05-18 14:53:07,582  INFO      Notes is open
+2026-05-18 14:53:07,583  INFO      File written: post_6.txt
+2026-05-18 14:53:07,786  INFO      Note created in Notes app
+2026-05-18 14:53:08,645  INFO      Notes closed
+2026-05-18 14:53:08,645  INFO      Done — post_6.txt saved successfully
+2026-05-18 14:53:09,050  INFO      
+2026-05-18 14:53:09,051  INFO      =======================================================
+2026-05-18 14:53:09,051  INFO      Processing post 7 of 10  (id=7)
+2026-05-18 14:53:09,051  INFO      =======================================================
+2026-05-18 14:53:12,364  INFO      Detection attempt 1 of 3
+2026-05-18 14:53:13,747  INFO      [template match]  found at (1732, 92)  conf=0.785
+2026-05-18 14:53:14,335  INFO      Detection screenshot saved → detection_post_7.png
+2026-05-18 14:53:14,336  INFO      Moving to Notes icon at (1732, 92) and double-clicking
+2026-05-18 14:53:15,934  INFO      Notes is open
+2026-05-18 14:53:15,935  INFO      File written: post_7.txt
+2026-05-18 14:53:16,142  INFO      Note created in Notes app
+2026-05-18 14:53:17,012  INFO      Notes closed
+2026-05-18 14:53:17,012  INFO      Done — post_7.txt saved successfully
+2026-05-18 14:53:17,417  INFO      
+2026-05-18 14:53:17,418  INFO      =======================================================
+2026-05-18 14:53:17,418  INFO      Processing post 8 of 10  (id=8)
+2026-05-18 14:53:17,418  INFO      =======================================================
+2026-05-18 14:53:20,649  INFO      Detection attempt 1 of 3
+2026-05-18 14:53:22,054  INFO      [template match]  found at (1732, 92)  conf=0.785
+2026-05-18 14:53:22,675  INFO      Detection screenshot saved → detection_post_8.png
+2026-05-18 14:53:22,675  INFO      Moving to Notes icon at (1732, 92) and double-clicking
+2026-05-18 14:53:24,252  INFO      Notes is open
+2026-05-18 14:53:24,253  INFO      File written: post_8.txt
+2026-05-18 14:53:24,453  INFO      Note created in Notes app
+2026-05-18 14:53:25,320  INFO      Notes closed
+2026-05-18 14:53:25,320  INFO      Done — post_8.txt saved successfully
+2026-05-18 14:53:25,725  INFO      
+2026-05-18 14:53:25,725  INFO      =======================================================
+2026-05-18 14:53:25,726  INFO      Processing post 9 of 10  (id=9)
+2026-05-18 14:53:25,726  INFO      =======================================================
+2026-05-18 14:53:28,915  INFO      Detection attempt 1 of 3
+2026-05-18 14:53:30,283  INFO      [template match]  found at (1732, 92)  conf=0.785
+2026-05-18 14:53:30,891  INFO      Detection screenshot saved → detection_post_9.png
+2026-05-18 14:53:30,892  INFO      Moving to Notes icon at (1732, 92) and double-clicking
+2026-05-18 14:53:32,454  INFO      Notes is open
+2026-05-18 14:53:32,455  INFO      File written: post_9.txt
+2026-05-18 14:53:32,657  INFO      Note created in Notes app
+2026-05-18 14:53:33,532  INFO      Notes closed
+2026-05-18 14:53:33,532  INFO      Done — post_9.txt saved successfully
+2026-05-18 14:53:33,937  INFO      
+2026-05-18 14:53:33,938  INFO      =======================================================
+2026-05-18 14:53:33,938  INFO      Processing post 10 of 10  (id=10)
+2026-05-18 14:53:33,938  INFO      =======================================================
+2026-05-18 14:53:37,170  INFO      Detection attempt 1 of 3
+2026-05-18 14:53:38,569  INFO      [template match]  found at (1732, 92)  conf=0.785
+2026-05-18 14:53:39,175  INFO      Detection screenshot saved → detection_post_10.png
+2026-05-18 14:53:39,175  INFO      Moving to Notes icon at (1732, 92) and double-clicking
+2026-05-18 14:53:40,739  INFO      Notes is open
+2026-05-18 14:53:40,739  INFO      File written: post_10.txt
+2026-05-18 14:53:40,933  INFO      Note created in Notes app
+2026-05-18 14:53:41,794  INFO      Notes closed
+2026-05-18 14:53:41,794  INFO      Done — post_10.txt saved successfully
+2026-05-18 14:53:42,199  INFO      
+2026-05-18 14:53:42,200  INFO      =======================================================
+2026-05-18 14:53:42,200  INFO      Finished — 9 saved,  1 failed
+2026-05-18 14:53:42,200  INFO      Files   → /Users/abdulrahmanmagdy/Desktop/tjm-project
+2026-05-18 14:53:42,200  INFO      Screenshots → /Users/abdulrahmanmagdy/Desktop/tjm-project/detection_screenshots
+2026-05-18 14:53:42,200  INFO      =======================================================
+2026-05-18 15:01:44,017  INFO      =======================================================
+2026-05-18 15:01:44,020  INFO      Vision-Based Desktop Automation — macOS
+2026-05-18 15:01:44,020  INFO      =======================================================
+2026-05-18 15:01:44,098  WARNING   API unavailable (HTTPSConnectionPool(host='jsonplaceholder.typicode.com', port=443): Max retries exceeded with url: /posts (Caused by NameResolutionError("HTTPSConnection(host='jsonplaceholder.typicode.com', port=443): Failed to resolve 'jsonplaceholder.typicode.com' ([Errno 8] nodename nor servname provided, or not known)"))) — using offline fallback data
+2026-05-18 15:01:44,098  INFO      Loaded 10 posts
+2026-05-18 15:01:44,104  INFO      Template image loaded: notes_icon.png  (196, 172)
+2026-05-18 15:01:44,104  INFO      
+2026-05-18 15:01:44,104  INFO      =======================================================
+2026-05-18 15:01:44,104  INFO      Processing post 1 of 10  (id=1)
+2026-05-18 15:01:44,104  INFO      =======================================================
+2026-05-18 15:01:47,614  INFO      Detection attempt 1 of 3
+2026-05-18 15:01:49,044  INFO      [template match]  found at (296, 686)  conf=0.894
+2026-05-18 15:01:49,635  INFO      Detection screenshot saved → detection_post_1.png
+2026-05-18 15:01:49,635  INFO      Moving to Notes icon at (296, 686) and double-clicking
+2026-05-18 15:01:51,225  INFO      Notes is open
+2026-05-18 15:01:51,225  INFO      File written: post_1.txt
+2026-05-18 15:01:51,596  INFO      Note created in Notes app
+2026-05-18 15:01:52,495  INFO      Notes closed
+2026-05-18 15:01:52,496  INFO      Done — post_1.txt saved successfully
+2026-05-18 15:01:52,901  INFO      
+2026-05-18 15:01:52,901  INFO      =======================================================
+2026-05-18 15:01:52,901  INFO      Processing post 2 of 10  (id=2)
+2026-05-18 15:01:52,901  INFO      =======================================================
+2026-05-18 15:01:56,402  INFO      Detection attempt 1 of 3
+2026-05-18 15:01:57,786  INFO      [template match]  found at (296, 686)  conf=0.852
+2026-05-18 15:01:58,413  INFO      Detection screenshot saved → detection_post_2.png
+2026-05-18 15:01:58,413  INFO      Moving to Notes icon at (296, 686) and double-clicking
+2026-05-18 15:02:00,006  INFO      Notes is open
+2026-05-18 15:02:00,007  INFO      File written: post_2.txt
+2026-05-18 15:02:00,218  INFO      Note created in Notes app
+2026-05-18 15:02:01,095  INFO      Notes closed
+2026-05-18 15:02:01,095  INFO      Done — post_2.txt saved successfully
+2026-05-18 15:02:01,500  INFO      
+2026-05-18 15:02:01,501  INFO      =======================================================
+2026-05-18 15:02:01,501  INFO      Processing post 3 of 10  (id=3)
+2026-05-18 15:02:01,501  INFO      =======================================================
+2026-05-18 15:02:04,972  INFO      Detection attempt 1 of 3
+2026-05-18 15:02:06,552  INFO      [template match]  found at (296, 686)  conf=0.852
+2026-05-18 15:02:07,160  INFO      Detection screenshot saved → detection_post_3.png
+2026-05-18 15:02:07,160  INFO      Moving to Notes icon at (296, 686) and double-clicking
+2026-05-18 15:02:08,722  INFO      Notes is open
+2026-05-18 15:02:08,722  INFO      File written: post_3.txt
+2026-05-18 15:02:08,930  INFO      Note created in Notes app
+2026-05-18 15:02:09,792  INFO      Notes closed
+2026-05-18 15:02:09,792  INFO      Done — post_3.txt saved successfully
+2026-05-18 15:02:10,198  INFO      
+2026-05-18 15:02:10,198  INFO      =======================================================
+2026-05-18 15:02:10,198  INFO      Processing post 4 of 10  (id=4)
+2026-05-18 15:02:10,198  INFO      =======================================================
+2026-05-18 15:02:12,621  INFO      Stopped by user (Ctrl+C)
+2026-05-18 15:02:12,949  INFO      Notes force-quit
+2026-05-18 15:02:12,949  INFO      
+2026-05-18 15:02:12,950  INFO      =======================================================
+2026-05-18 15:02:12,950  INFO      Finished — 3 saved,  0 failed
+2026-05-18 15:02:12,950  INFO      Files   → /Users/abdulrahmanmagdy/Desktop/tjm-project
+2026-05-18 15:02:12,950  INFO      Screenshots → /Users/abdulrahmanmagdy/Desktop/tjm-project/detection_screenshots
+2026-05-18 15:02:12,950  INFO      =======================================================

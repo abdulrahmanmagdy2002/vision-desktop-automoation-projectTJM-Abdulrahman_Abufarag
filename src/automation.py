@@ -25,8 +25,48 @@ from pathlib import Path
 from typing import Optional
 
 import pyautogui
+import Quartz
 
 logger = logging.getLogger(__name__)
+
+
+def _native_double_click(x: int, y: int) -> None:
+    """
+    Send a true macOS double-click via Quartz CoreGraphics.
+
+    pyautogui.doubleClick() and two pyautogui.click() calls both fail to
+    register as a double-click on macOS desktop icons because the second
+    mouse-down event needs kCGMouseEventClickState=2 — pyautogui does not
+    set this reliably, so Finder treats the events as two separate clicks
+    that just select the icon instead of opening it.
+    """
+    pos = (float(x), float(y))
+
+    # First click — clickState = 1
+    down1 = Quartz.CGEventCreateMouseEvent(
+        None, Quartz.kCGEventLeftMouseDown, pos, Quartz.kCGMouseButtonLeft
+    )
+    Quartz.CGEventSetIntegerValueField(down1, Quartz.kCGMouseEventClickState, 1)
+    Quartz.CGEventPost(Quartz.kCGHIDEventTap, down1)
+    up1 = Quartz.CGEventCreateMouseEvent(
+        None, Quartz.kCGEventLeftMouseUp, pos, Quartz.kCGMouseButtonLeft
+    )
+    Quartz.CGEventSetIntegerValueField(up1, Quartz.kCGMouseEventClickState, 1)
+    Quartz.CGEventPost(Quartz.kCGHIDEventTap, up1)
+
+    time.sleep(0.08)
+
+    # Second click — clickState = 2 marks this pair as a double-click
+    down2 = Quartz.CGEventCreateMouseEvent(
+        None, Quartz.kCGEventLeftMouseDown, pos, Quartz.kCGMouseButtonLeft
+    )
+    Quartz.CGEventSetIntegerValueField(down2, Quartz.kCGMouseEventClickState, 2)
+    Quartz.CGEventPost(Quartz.kCGHIDEventTap, down2)
+    up2 = Quartz.CGEventCreateMouseEvent(
+        None, Quartz.kCGEventLeftMouseUp, pos, Quartz.kCGMouseButtonLeft
+    )
+    Quartz.CGEventSetIntegerValueField(up2, Quartz.kCGMouseEventClickState, 2)
+    Quartz.CGEventPost(Quartz.kCGHIDEventTap, up2)
 
 pyautogui.FAILSAFE = True   # safety valve: move mouse to top-left to abort
 pyautogui.PAUSE    = 0.05
@@ -54,16 +94,14 @@ def show_desktop() -> None:
     """
     _run_applescript(script)
     time.sleep(1.5)
+    # Give Finder focus so it will respond to double-clicks on desktop icons
+    _run_applescript('tell application "Finder" to activate')
+    time.sleep(0.5)
 
 
 # ------------------------------------------------------------------ #
 #  App lifecycle                                                       #
 # ------------------------------------------------------------------ #
-
-pyautogui.click(700, 600)   # click empty desktop area to deselect
-time.sleep(0.3)
-pyautogui.moveTo(x, y, duration=0.4)
-pyautogui.doubleClick(interval=0.15)
 
 def launch_notes(x: int, y: int) -> bool:
     """
@@ -76,7 +114,7 @@ def launch_notes(x: int, y: int) -> bool:
     try:
         pyautogui.moveTo(x, y, duration=0.4)
         time.sleep(0.2)
-        pyautogui.doubleClick(interval=0.15)
+        _native_double_click(x, y)
         time.sleep(0.5)
 
         if _wait_for_notes(timeout=8):

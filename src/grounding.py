@@ -61,7 +61,7 @@ class IconGrounder:
         self,
         target_name: str = "Notes",
         template_path: Optional[Path] = None,
-        template_threshold: float = 0.75,
+        template_threshold: float = 0.55,
         ocr_threshold: float = 0.55,
     ):
         self.target_name        = target_name
@@ -218,17 +218,24 @@ class IconGrounder:
             if similarity <= 0.0:
                 continue
 
+            label_y = ocr_data["top"][i]
+            label_h = ocr_data["height"][i]
+            icon_offset = max(label_h * 2, 48)
+
+            # Skip the macOS menu bar — any text there is not a desktop icon
+            # label, and the implied icon position would land above the screen.
+            if label_y - icon_offset < 60:
+                continue
+
             ocr_confidence = max(0.0, float(ocr_data["conf"][i])) / 100.0
             score = similarity * 0.9 + ocr_confidence * 0.1
 
             if score > best_score:
                 best_score = score
                 label_x = ocr_data["left"][i]
-                label_y = ocr_data["top"][i]
                 label_w = ocr_data["width"][i]
-                label_h = ocr_data["height"][i]
                 best_x = label_x + label_w // 2
-                best_y = max(0, label_y - max(label_h * 2, 48))
+                best_y = label_y - icon_offset
 
         return best_x, best_y, best_score
 
